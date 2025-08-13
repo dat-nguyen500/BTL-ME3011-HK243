@@ -1,5 +1,6 @@
 \documentclass[12pt,a4paper]{article}
 \usepackage[left=25mm,right=20mm,top=20mm,bottom=20mm]{geometry}
+\usepackage{url}
 \usepackage{graphicx}
 \usepackage[utf8]{vietnam}
 \usepackage{circuitikz}
@@ -427,27 +428,14 @@ Dựa vào sơ đồ khối ở hình \ref{fig:4}, ta xây dựng được sơ �
 
 Trong sơ đồ MATLAB/Simulink hình \ref{fig:m1}, các hàm $F(t)$ đầu vào được khai báo như sau:
 \begin{enumerate}
-    \item Đối với hàm Dirac, sử dụng khối \textbf{Step} với hai biến \texttt{impulseDuration} và \texttt{impulseAmplitude} được khai báo trong MATLAB để tạo ra hàm Dirac.
-    \vspace{-5mm}
+    \item Hàm Dirac được khai báo bằng khối \textbf{Hàm Dirac}. Khối này là một hệ con (subsystem) được dựa vào một blog của MATLAB tại địa chỉ \url{https://blogs.mathworks.com/simulink/2024/08/23/how-can-i-create-an-impulse-delta-signal-in-simulink/}.
     \begin{figure}[ht]
         \centering
-        \includegraphics[width=0.5\linewidth]{MATLAB_2.png}
-        \vspace{-5mm}
-        \caption{Khai báo khối \textbf{Step} đối với hàm Dirac}
+        \includegraphics[width=\linewidth]{MATLAB_2.pdf}
+        \caption{Nội dung khối \textbf{Hàm Dirac}}
     \end{figure}
 
-    \begin{lstlisting}[style=matlabstyle,caption=Khai báo hai biến \texttt{impulseDuration} và \texttt{impulseAmplitude} trong MATLAB để mô phỏng đầu vào là hàm Dirac cho hệ thống]
-mdl = "phan_tich_he_thong_ode";
-open_system(mdl);
-p = [1e-6 0.1 1];
-in = repmat(Simulink.SimulationInput(mdl),length(p),1);
-for i = 1:length(in)
-    in(i) = in(i).setVariable('impulseDuration',p(i));
-    in(i) = in(i).setVariable('impulseAmplitude',1/p(i));
-end
-out = sim(in,'ShowProgress','off');
-    \end{lstlisting}
-    \item Đối với hàm nấc đơn vị, sử dụng khối \textbf{Step} được khai báo như hình dưới
+    \item Hàm nấc đơn vị, sử dụng khối \textbf{Step} được khai báo như hình dưới
     \vspace{-5mm}
     \begin{figure}[ht]
         \centering
@@ -468,6 +456,7 @@ end
     \end{lstlisting}
 \end{enumerate}
 
+\newpage
 \subsection{Phân tích và đánh giá kết quả mô phỏng}
 \subsubsection{Đầu vào hàm Dirac}
 \begin{itemize}
@@ -492,7 +481,7 @@ end
     \end{itemize}
 \end{itemize}
 
-\newpage
+
 \subsubsection{Đầu vào hàm nấc đơn vị}
 \begin{itemize}
     \item Kết quả mô phỏng 
@@ -592,7 +581,7 @@ Do bộ điều khiển PID có một cực tại $s=0$ và 2 zero nên trong c�
     \caption{Thiết kế bộ điều khiển PID cho góc lắc $\theta$ con lắc}
 \end{center}
 
-Vùng màu vàng trong \textbf{Root Locus Editor for LoopTransfer\_C} và  \textbf{Impulse Response} là các vùng mà không thỏa mãn yêu cầu đề bài. Bằng cách kéo thả cặp zero phức của bộ điều khiển và cặp cực của hệ kín (hình vuông màu tím) ở bên cửa sổ \textbf{Root Locus Editor for LoopTransfer\_C} vào vùng màu trắng, nhóm tìm được hàm truyền của bộ điều khiển PID cho góc lắc $\theta$ của con lắc.
+Vùng màu vàng trong \textbf{Root Locus Editor for LoopTransfer\_C} và  \textbf{Impulse Response} là các vùng mà không thỏa mãn yêu cầu đề bài. Bằng cách kéo thả cặp zero phức của bộ điều khiển và các cực của hệ kín (hình vuông màu tím) ở bên cửa sổ \textbf{Root Locus Editor for LoopTransfer\_C} vào vùng màu trắng, nhóm tìm được hàm truyền của bộ điều khiển PID cho góc lắc $\theta$ của con lắc.
 \begin{align}
     C_{\text{PID con lắc}} = \frac{6.525 (s^2 + 7.765s + 15.13)}{s}
 \end{align}
@@ -604,7 +593,24 @@ Các hệ số của bộ điều khiển PID con lắc là
     \item $K_d = 6.5250$.
 \end{itemize}
 
+
 \subsubsection{Mô phỏng bằng MATLAB/Simulink}
+
+Dưới đây là sơ đồ MATLAB/Simulink cho hệ thống điều khiển con lắc:
+\newpage
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\linewidth]{MATLAB_4.pdf}
+    \caption{Sơ đồ MATLAB/Simulink cho hệ thống điều khiển con lắc}
+\end{figure}
+
+Kết quả mô phỏng bằng MATLAB/Simulink
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\linewidth]{MATLAB_5.pdf}
+    \caption{Kết quả mô phỏng bằng MATLAB/Simulink cho hệ thống điều khiển con lắc}
+\end{figure}
+
 \subsubsection{Đánh giá, nhận xét}
 
 
@@ -648,30 +654,41 @@ Sử dụng công cụ \textbf{Control System Designer} của MATLAB để thi�
 controlSystemDesigner('rlocus', G1);
 \end{lstlisting}
 
-Do bộ điều khiển PID có một cực tại $s=0$ và 2 zero nên trong cửa sổ \textbf{Control System Designer}, nhóm chọn 2 zero phức (complex zero). 
-\begin{align}
-    C(s) = K_p + \frac{K_i}{s} + K_ds = \frac{K_ds^2 + K_ps +K_i}{s}
-\end{align}
 
 \begin{center}
     \captionsetup{type=figure}
-    \includegraphics[width=\linewidth]{thiet_ke_PID_con_lac.png}
-    \caption{Thiết kế bộ điều khiển PID cho góc lắc $\theta$ con lắc}
+    \includegraphics[width=\linewidth]{thiet_ke_PID_xe_day.png}
+    \caption{Thiết kế bộ điều khiển PID cho vị trí $x$ xe đẩy}
 \end{center}
 
-Vùng màu vàng trong \textbf{Root Locus Editor for LoopTransfer\_C} và  \textbf{Impulse Response} là các vùng mà không thỏa mãn yêu cầu đề bài. Bằng cách kéo thả cặp zero phức của bộ điều khiển và cặp cực của hệ kín (hình vuông màu tím) ở bên cửa sổ \textbf{Root Locus Editor for LoopTransfer\_C} vào vùng màu trắng, nhóm tìm được hàm truyền của bộ điều khiển PID cho góc lắc $\theta$ của con lắc.
+Vùng màu vàng trong \textbf{Root Locus Editor for LoopTransfer\_C} và  \textbf{Step Response} là các vùng mà không thỏa mãn yêu cầu đề bài. Bằng cách kéo thả cặp zero phức của bộ điều khiển và các cực của hệ kín (hình vuông màu tím) ở bên cửa sổ \textbf{Root Locus Editor for LoopTransfer\_C} vào vùng màu trắng, nhóm tìm được hàm truyền của bộ điều khiển PID cho vị trí $x$ xe đẩy.
 \begin{align}
-    C_{\text{PID con lắc}} = \frac{6.525 (s^2 + 7.765s + 15.13)}{s}
+    C_{\text{PID xe đẩy}} = \frac{159.4 s^2 + 2786 s + 2.564\cdot 10^4}{s}
 \end{align}
 
-Các hệ số của bộ điều khiển PID con lắc là
+Các hệ số của bộ điều khiển PID xe đẩy là
 \begin{itemize}
-    \item $K_p = 50.6646$.
-    \item $K_i = 98.7160$.
-    \item $K_d = 6.5250$.
+    \item $K_p = 2786.3$.
+    \item $K_i = 2.5638\cdot 10^4$.
+    \item $K_d = 159.3864 $.
 \end{itemize}
 
 \subsubsection{Mô phỏng bằng MATLAB/Simulink}
+
+Dưới đây là sơ đồ MATLAB/Simulink cho hệ thống điều khiển xe đẩy:
+\newpage
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\linewidth]{MATLAB_7.pdf}
+    \caption{Sơ đồ MATLAB/Simulink cho hệ thống điều khiển xe đẩy}
+\end{figure}
+
+Kết quả mô phỏng bằng MATLAB/Simulink
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\linewidth]{MATLAB_6.pdf}
+    \caption{Kết quả mô phỏng bằng MATLAB/Simulink cho hệ thống điều khiển xe đẩy}
+\end{figure}
 \subsubsection{Đánh giá, nhận xét}
 
 \subsection{Thiết kế bộ điều khiển không gian trạng thái}

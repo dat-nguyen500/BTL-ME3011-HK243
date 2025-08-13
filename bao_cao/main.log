@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.12)  12 AUG 2025 17:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.12)  13 AUG 2025 04:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/datng/Files/bai_tap_lon_ME3011_HK243/latex/main.tex
-(/home/datng/Files/bai_tap_lon_ME3011_HK243/latex/main.tex
+**/home/datng/Files/bai_tap_lon_ME3011_HK243/bao_cao/main.tex
+(/home/datng/Files/bai_tap_lon_ME3011_HK243/bao_cao/main.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
 (/home/datng/.miktex/texmfs/install/tex/latex/base/article.cls
@@ -45,7 +45,10 @@ Package: iftex 2024/12/12 v1.0g TeX engine tests
 \Gm@layouthoffset=\dimen155
 \Gm@layoutvoffset=\dimen156
 \Gm@dimlist=\toks18
- (/home/datng/.miktex/texmfs/install/tex/latex/geometry/geometry.cfg)) (/home/datng/.miktex/texmfs/install/tex/latex/graphics/graphicx.sty
+ (/home/datng/.miktex/texmfs/install/tex/latex/geometry/geometry.cfg)) (/home/datng/.miktex/texmfs/install/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+) (/home/datng/.miktex/texmfs/install/tex/latex/graphics/graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
  (/home/datng/.miktex/texmfs/install/tex/latex/graphics/graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
@@ -526,7 +529,7 @@ LaTeX Info: Redefining \smash on input line 939.
 LaTeX Info: Redefining \relbar on input line 969.
 LaTeX Info: Redefining \Relbar on input line 970.
 \c@MaxMatrixCols=\count318
-\dotsspace@=\muskip17
+\dotsspace@=\muskip18
 \c@parentequation=\count319
 \dspbrk@lvl=\count320
 \tag@help=\toks34
@@ -652,22 +655,22 @@ Package: listings 2024/09/23 1.10c (Carsten Heinz)
  (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -732,13 +735,13 @@ pdfTeX warning: pdflatex (file ./logo_bk.pdf): PDF inclusion: found PDF version 
 <logo_bk.pdf, id=4, 47.17625pt x 47.17625pt>
 File: logo_bk.pdf Graphic file (type pdf)
 <use logo_bk.pdf>
-Package pdftex.def Info: logo_bk.pdf  used on input line 74.
+Package pdftex.def Info: logo_bk.pdf  used on input line 75.
 (pdftex.def)             Requested size: 188.70447pt x 188.70447pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 87.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 88.
 (/home/datng/.miktex/texmfs/install/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 87.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 88.
  (/home/datng/.miktex/texmfs/install/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -754,7 +757,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [1]
 
 [2]
-Overfull \hbox (26.48825pt too wide) detected at line 203
+Overfull \hbox (26.48825pt too wide) detected at line 204
 [][][]
  []
 
@@ -767,114 +770,137 @@ Overfull \hbox (26.48825pt too wide) detected at line 203
 [5]
 
 [6]
-<MATLAB_1.pdf, id=55, 769.87625pt x 562.1pt>
+<MATLAB_1.pdf, id=55, 794.97pt x 614.295pt>
 File: MATLAB_1.pdf Graphic file (type pdf)
 <use MATLAB_1.pdf>
-Package pdftex.def Info: MATLAB_1.pdf  used on input line 422.
-(pdftex.def)             Requested size: 578.70973pt x 422.52342pt.
+Package pdftex.def Info: MATLAB_1.pdf  used on input line 423.
+(pdftex.def)             Requested size: 546.79527pt x 422.52342pt.
 
 
 [7 <./MATLAB_1.pdf>]
-LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 430.
+LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 431.
  (/home/datng/.miktex/texmfs/install/tex/latex/vntex/t5cmtt.fd
 File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-<MATLAB_2.png, id=107, 435.87843pt x 408.02437pt>
-File: MATLAB_2.png Graphic file (type png)
-<use MATLAB_2.png>
-Package pdftex.def Info: MATLAB_2.png  used on input line 434.
-(pdftex.def)             Requested size: 234.73524pt x 219.7322pt.
+<MATLAB_2.pdf, id=102, 398.48875pt x 69.25874pt>
+File: MATLAB_2.pdf Graphic file (type pdf)
+<use MATLAB_2.pdf>
+Package pdftex.def Info: MATLAB_2.pdf  used on input line 434.
+(pdftex.def)             Requested size: 469.47049pt x 81.59883pt.
 
-Overfull \hbox (20.19455pt too wide) in paragraph at lines 430--438
-[]\T5/cmr/m/n/12 ^^^èi vîi h m Dirac, sû döng khèi \T5/cmr/bx/n/12 Step \T5/cmr/m/n/12 vîi hai bi¸n \T5/cmtt/m/n/12 impulseDuration \T5/cmr/m/n/12 v  \T5/cmtt/m/n/12 impulseAmplitude
+Overfull \hbox (18.33223pt too wide) in paragraph at lines 431--437
+\T5/cmtt/m/n/12 simulink / 2024 / 08 / 23 / how-[]can-[]i-[]create-[]an-[]impulse-[]delta-[]signal-[]in-[]simulink/$\T5/cmr/m/n/12 .
  []
 
+<MATLAB_3.png, id=103, 435.87843pt x 408.02437pt>
+File: MATLAB_3.png Graphic file (type png)
+<use MATLAB_3.png>
+Package pdftex.def Info: MATLAB_3.png  used on input line 442.
+(pdftex.def)             Requested size: 234.73524pt x 219.7322pt.
 (/home/datng/.miktex/texmfs/install/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
-<MATLAB_3.png, id=109, 435.87843pt x 408.02437pt>
-File: MATLAB_3.png Graphic file (type png)
-<use MATLAB_3.png>
-Package pdftex.def Info: MATLAB_3.png  used on input line 454.
-(pdftex.def)             Requested size: 234.73524pt x 219.7322pt.
-
 
 [8
 
 
- <./MATLAB_2.png> <./MATLAB_3.png>]
-<phan_tich_x_dirac.pdf, id=118, 400.49625pt x 301.125pt>
+ <./MATLAB_2.pdf> <./MATLAB_3.png>]
+<phan_tich_x_dirac.pdf, id=133, 400.49625pt x 301.125pt>
 File: phan_tich_x_dirac.pdf Graphic file (type pdf)
 <use phan_tich_x_dirac.pdf>
-Package pdftex.def Info: phan_tich_x_dirac.pdf  used on input line 479.
+Package pdftex.def Info: phan_tich_x_dirac.pdf  used on input line 468.
 (pdftex.def)             Requested size: 232.38559pt x 174.73073pt.
-<phan_tich_theta_dirac.pdf, id=119, 401.5pt x 301.125pt>
+<phan_tich_theta_dirac.pdf, id=134, 398.48875pt x 301.125pt>
 File: phan_tich_theta_dirac.pdf Graphic file (type pdf)
 <use phan_tich_theta_dirac.pdf>
-Package pdftex.def Info: phan_tich_theta_dirac.pdf  used on input line 484.
-(pdftex.def)             Requested size: 232.38559pt x 174.29422pt.
-
-
-[9 <./phan_tich_x_dirac.pdf> <./phan_tich_theta_dirac.pdf>]
-<phan_tich_x_step.pdf, id=146, 401.5pt x 301.125pt>
+Package pdftex.def Info: phan_tich_theta_dirac.pdf  used on input line 473.
+(pdftex.def)             Requested size: 232.38559pt x 175.60373pt.
+<phan_tich_x_step.pdf, id=135, 401.5pt x 301.125pt>
 File: phan_tich_x_step.pdf Graphic file (type pdf)
 <use phan_tich_x_step.pdf>
-Package pdftex.def Info: phan_tich_x_step.pdf  used on input line 503.
+Package pdftex.def Info: phan_tich_x_step.pdf  used on input line 492.
 (pdftex.def)             Requested size: 232.38559pt x 174.29422pt.
-<phan_tich_theta_step.pdf, id=147, 401.5pt x 301.125pt>
+<phan_tich_theta_step.pdf, id=136, 401.5pt x 301.125pt>
 File: phan_tich_theta_step.pdf Graphic file (type pdf)
 <use phan_tich_theta_step.pdf>
-Package pdftex.def Info: phan_tich_theta_step.pdf  used on input line 508.
+Package pdftex.def Info: phan_tich_theta_step.pdf  used on input line 497.
 (pdftex.def)             Requested size: 232.38559pt x 174.29422pt.
-<phan_tich_x_f.pdf, id=148, 401.5pt x 301.125pt>
+<phan_tich_x_f.pdf, id=137, 401.5pt x 301.125pt>
 File: phan_tich_x_f.pdf Graphic file (type pdf)
 <use phan_tich_x_f.pdf>
-Package pdftex.def Info: phan_tich_x_f.pdf  used on input line 527.
+Package pdftex.def Info: phan_tich_x_f.pdf  used on input line 516.
 (pdftex.def)             Requested size: 232.38559pt x 174.29422pt.
-<phan_tich_theta_f.pdf, id=149, 401.5pt x 301.125pt>
+<phan_tich_theta_f.pdf, id=138, 401.5pt x 301.125pt>
 File: phan_tich_theta_f.pdf Graphic file (type pdf)
 <use phan_tich_theta_f.pdf>
-Package pdftex.def Info: phan_tich_theta_f.pdf  used on input line 532.
+Package pdftex.def Info: phan_tich_theta_f.pdf  used on input line 521.
 (pdftex.def)             Requested size: 232.38559pt x 174.29422pt.
 
 
-[10 <./phan_tich_x_step.pdf> <./phan_tich_theta_step.pdf> <./phan_tich_x_f.pdf> <./phan_tich_theta_f.pdf>]
-<thiet_ke_PID_con_lac.png, id=197, 1445.4pt x 776.9025pt>
+[9 <./phan_tich_x_dirac.pdf> <./phan_tich_theta_dirac.pdf> <./phan_tich_x_step.pdf> <./phan_tich_theta_step.pdf>]
+
+[10 <./phan_tich_x_f.pdf> <./phan_tich_theta_f.pdf>]
+<thiet_ke_PID_con_lac.png, id=212, 1445.4pt x 776.9025pt>
 File: thiet_ke_PID_con_lac.png Graphic file (type png)
 <use thiet_ke_PID_con_lac.png>
-Package pdftex.def Info: thiet_ke_PID_con_lac.png  used on input line 591.
+Package pdftex.def Info: thiet_ke_PID_con_lac.png  used on input line 580.
 (pdftex.def)             Requested size: 469.47049pt x 252.3362pt.
 
 
 [11 <./thiet_ke_PID_con_lac.png>]
-File: thiet_ke_PID_con_lac.png Graphic file (type png)
-<use thiet_ke_PID_con_lac.png>
-Package pdftex.def Info: thiet_ke_PID_con_lac.png  used on input line 658.
+<MATLAB_4.pdf, id=218, 633.36626pt x 176.66pt>
+File: MATLAB_4.pdf Graphic file (type pdf)
+<use MATLAB_4.pdf>
+Package pdftex.def Info: MATLAB_4.pdf  used on input line 603.
+(pdftex.def)             Requested size: 469.47049pt x 130.95007pt.
+<MATLAB_5.pdf, id=219, 398.48875pt x 301.125pt>
+File: MATLAB_5.pdf Graphic file (type pdf)
+<use MATLAB_5.pdf>
+Package pdftex.def Info: MATLAB_5.pdf  used on input line 610.
+(pdftex.def)             Requested size: 469.47049pt x 354.77762pt.
+
+
+[12 <./MATLAB_4.pdf> <./MATLAB_5.pdf>]
+<thiet_ke_PID_xe_day.png, id=256, 1445.4pt x 776.9025pt>
+File: thiet_ke_PID_xe_day.png Graphic file (type png)
+<use thiet_ke_PID_xe_day.png>
+Package pdftex.def Info: thiet_ke_PID_xe_day.png  used on input line 660.
 (pdftex.def)             Requested size: 469.47049pt x 252.3362pt.
 
 
-[12]
+[13 <./thiet_ke_PID_xe_day.png>]
+<MATLAB_7.pdf, id=261, 558.085pt x 136.51pt>
+File: MATLAB_7.pdf Graphic file (type pdf)
+<use MATLAB_7.pdf>
+Package pdftex.def Info: MATLAB_7.pdf  used on input line 682.
+(pdftex.def)             Requested size: 469.47049pt x 114.83841pt.
+<MATLAB_6.pdf, id=262, 398.48875pt x 301.125pt>
+File: MATLAB_6.pdf Graphic file (type pdf)
+<use MATLAB_6.pdf>
+Package pdftex.def Info: MATLAB_6.pdf  used on input line 689.
+(pdftex.def)             Requested size: 469.47049pt x 354.77762pt.
 
-[13]
 
-[14] (main.aux)
+[14 <./MATLAB_7.pdf> <./MATLAB_6.pdf>]
+
+[15] (main.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 40005 strings out of 468135
- 996396 string characters out of 5435616
- 1870602 words of memory out of 5000000
- 68221 multiletter control sequences out of 15000+600000
+ 40112 strings out of 468135
+ 998304 string characters out of 5435616
+ 1820811 words of memory out of 5000000
+ 68324 multiletter control sequences out of 15000+600000
  650363 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,16n,105p,573b,1889s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,16n,105p,574b,1887s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/datng/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx8.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi12.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi8.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy8.pfb></home/datng/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnbx12.pfb></home/datng/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnr10.pfb></home/datng/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnr12.pfb></home/datng/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnr17.pfb></home/datng/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnr6.pfb></home/datng/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnr8.pfb></home/datng/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnti12.pfb></home/datng/.miktex/texmfs/install/fonts/type1/vntex/vnr/vntt10.pfb></home/datng/.miktex/texmfs/install/fonts/type1/vntex/vnr/vntt12.pfb>
-Output written on main.pdf (15 pages, 571491 bytes).
+Output written on main.pdf (16 pages, 760311 bytes).
 PDF statistics:
- 308 PDF objects out of 1000 (max. 8388607)
+ 394 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 68 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 93 words of extra memory for PDF output out of 10000 (max. 10000000)
 
