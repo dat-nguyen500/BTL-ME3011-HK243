@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1755082157.76194 "/home/datng/Files/bai_tap_lon_ME3011_HK243/bao_cao/main.tex" "main.pdf" "main" 1755082160.13847 0
+["pdflatex"] 1755083199.0485 "/home/datng/Files/bai_tap_lon_ME3011_HK243/bao_cao/main.tex" "main.pdf" "main" 1755083201.31152 0
   "/home/datng/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map" 1755080907.82302 6214733 8045d6228e4a5360b3c205b452da4b88 ""
   "/home/datng/.miktex/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt" 1755081864.43042 13252391 1a074d6e864f1bf804a53bd3bea81255 ""
   "/home/datng/.miktex/texmfs/install/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1755076348.52211 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -204,7 +204,7 @@
   "/home/datng/.miktex/texmfs/install/tex/latex/vntex/vietnam.sty" 1755019512.66121 2477 91784aa2c9213f74609391e3cae65a13 ""
   "/home/datng/.miktex/texmfs/install/tex/latex/vntex/vncaps.tex" 1755019512.66488 3273 a55ebdb07413d2fea580f210e3c0b252 ""
   "/home/datng/.miktex/texmfs/install/tex/latex/xcolor/xcolor.sty" 1755019356.57699 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "/home/datng/Files/bai_tap_lon_ME3011_HK243/bao_cao/main.tex" 1755082153.74352 33013 7ee5116566fcf85ea5b1f3b80e82b665 ""
+  "/home/datng/Files/bai_tap_lon_ME3011_HK243/bao_cao/main.tex" 1755083195.25927 32278 ac0044046bcab22711018e10abab0cab ""
   "MATLAB_1.pdf" 1755053501.95123 51008 ddfb198f671fc5b1d35c52ffa9a0c97f ""
   "MATLAB_2.pdf" 1755054119.71085 23285 9d38409d2c85b5c4f18e9683e0540c74 ""
   "MATLAB_3.png" 1755018983.59241 33964 65b97cb10106562c2235eb5d49a33690 ""
@@ -213,9 +213,9 @@
   "MATLAB_6.pdf" 1755058565.69399 7371 cb513b00d5f5b4177582866a6c8a37e1 ""
   "MATLAB_7.pdf" 1755059048.04971 25476 c8d5294c90fa6dc186a9f96b40c0af47 ""
   "logo_bk.pdf" 1755018983.59241 28360 c738039eb21d7aa442520bc68eddcb87 ""
-  "main.aux" 1755082159.90514 7711 2c0faf070e566c8bb10bda4b9c147a77 "pdflatex"
-  "main.tex" 1755082153.74352 33013 7ee5116566fcf85ea5b1f3b80e82b665 ""
-  "main.toc" 1755082159.90514 2341 991dfd206ae62722d87df6efc58f540c "pdflatex"
+  "main.aux" 1755083201.02271 7711 2f8783b46fcd92a09ea9db1eb98a5181 "pdflatex"
+  "main.tex" 1755083195.25927 32278 ac0044046bcab22711018e10abab0cab ""
+  "main.toc" 1755083201.02674 2341 991dfd206ae62722d87df6efc58f540c "pdflatex"
   "phan_tich_theta_dirac.pdf" 1755054674.22669 24688 dab8cc1057f64e755d307405b4af75c3 ""
   "phan_tich_theta_f.pdf" 1755018983.59241 9083 62f2bad067d5a9b1b5c6e2e75ef8f4c0 ""
   "phan_tich_theta_step.pdf" 1755018983.59241 9329 339558dd846b4bfec8da3649139765da ""
