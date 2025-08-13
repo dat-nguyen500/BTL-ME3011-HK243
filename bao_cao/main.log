@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.12)  13 AUG 2025 04:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.12)  13 AUG 2025 04:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -788,8 +788,8 @@ File: MATLAB_2.pdf Graphic file (type pdf)
 Package pdftex.def Info: MATLAB_2.pdf  used on input line 434.
 (pdftex.def)             Requested size: 469.47049pt x 81.59883pt.
 
-Overfull \hbox (18.33223pt too wide) in paragraph at lines 431--437
-\T5/cmtt/m/n/12 simulink / 2024 / 08 / 23 / how-[]can-[]i-[]create-[]an-[]impulse-[]delta-[]signal-[]in-[]simulink/$\T5/cmr/m/n/12 .
+Overfull \hbox (104.76112pt too wide) in paragraph at lines 431--437
+\T5/cmtt/m/n/12 mathworks . com / simulink / 2024 / 08 / 23 / how-[]can-[]i-[]create-[]an-[]impulse-[]delta-[]signal-[]in-[]simulink/$\T5/cmr/m/n/12 .
  []
 
 <MATLAB_3.png, id=103, 435.87843pt x 408.02437pt>
@@ -892,13 +892,13 @@ L3 programming layer <2025-07-20>
 Here is how much of TeX's memory you used:
  40112 strings out of 468135
  998304 string characters out of 5435616
- 1820811 words of memory out of 5000000
+ 1820821 words of memory out of 5000000
  68324 multiletter control sequences out of 15000+600000
  650363 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,16n,105p,574b,1887s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/datng/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx8.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi12.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi8.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy8.pfb></home/datng/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnbx12.pfb></home/datng/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnr10.pfb></home/datng/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnr12.pfb></home/datng/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnr17.pfb></home/datng/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnr6.pfb></home/datng/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnr8.pfb></home/datng/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnti12.pfb></home/datng/.miktex/texmfs/install/fonts/type1/vntex/vnr/vntt10.pfb></home/datng/.miktex/texmfs/install/fonts/type1/vntex/vnr/vntt12.pfb>
-Output written on main.pdf (16 pages, 760311 bytes).
+Output written on main.pdf (16 pages, 760314 bytes).
 PDF statistics:
  394 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
