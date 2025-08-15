@@ -39,6 +39,8 @@
     breakatwhitespace=false,
     escapeinside={\%*}{*)}            % Chèn code LaTeX trong code
 }
+
+\setcounter{secnumdepth}{4}
 \begin{document}
 \everymath{\displaystyle}
 \begin{titlepage}
@@ -131,6 +133,7 @@ Với hệ thống con lắc trên xe đẩy, giả sử các thông số sau:
         \rule{0pt}{7mm}Hệ số tắt dần của con lắc $b$ & $\frac{9+7}{10\times 2} = 0.8$ Ns/m \\[3mm] \hline 
     \end{tabular}
     \caption{Bảng thông số hệ thống}
+    \label{table:1}
 \end{table}
 
 \newpage
@@ -310,6 +313,8 @@ Giải hệ phương trình \eqref{eqn:5} theo hai biến $\ddot x$ và $\ddot \
 Chọn các biến $\vb x = \begin{bmatrix}
     x & \dot x & \theta & \dot\theta 
 \end{bmatrix}^T$ làm biến trạng thái. Kết hợp với hai phương trình \eqref{eqn:9} và \eqref{eqn:5}, ta có phương trình trạng thái của hệ với đầu ra là $x$ và $\theta$:
+
+
 \begin{align}
     \begin{bmatrix}
         \dot x \\ \ddot x \\ \dot \theta \\ \ddot\theta 
@@ -329,6 +334,11 @@ Chọn các biến $\vb x = \begin{bmatrix}
     \end{bmatrix}\begin{bmatrix}
         x \\ \dot x \\ \theta \\ \dot\theta 
     \end{bmatrix}\label{eqn:12}
+\end{align}
+Hay viết lại dưới dạng ký hiệu:
+\begin{align}
+    \vb{\dot x} &= \vb{Ax} + \vb{B}F \label{eqn:13}\\
+    \vb y &= \vb{Cx} \label{eqn:14}
 \end{align}
 
 \newpage
@@ -395,7 +405,34 @@ Từ hệ phương trình trạng thái \eqref{eqn:11} và \eqref{eqn:12}, ta x�
 \end{figure}
 
 
+\newpage
 \section{Phân tích hệ thống}
+
+Từ các thông số ở bảng \ref{table:1}, các ma trận của hệ thống \eqref{eqn:13} và \eqref{eqn:14} được xác định như sau:
+\begin{align}
+    \vb A &= \begin{bmatrix}
+        0     &   1       & 0 &      0 \\
+   0  & -0.0873  & -2.453  & -0.9877 \\
+   0        &   0        & 0        & 1 \\
+   0   & -0.194   & -27.25   & -10.97
+    \end{bmatrix}\\
+    \vb B & = \begin{bmatrix}
+        0\\
+        0.5556\\
+        0\\
+        1.235
+    \end{bmatrix}\\
+    \vb C &= \begin{bmatrix}
+        1 & 0 & 0 & 0 \\
+        0 & 0 & 1 & 0
+    \end{bmatrix}
+\end{align}
+
+Sử dụng hàm \texttt{ss2tf} để chuyển đổi từ dạng không gian trạng thái sang dạng hàm truyền, thu được
+\begin{align}
+    G_1(s) &= \frac{0.5556 s^2 + 4.877 s + 12.11}{s^4 + 11.06 s^3 + 28.02 s^2 + 1.903 s} \\
+    G_2(s) &= \frac{1.235s}{s^3 + 11.06 s^2 + 28.02 s + 1.903}
+\end{align}
 
 \subsection{Yêu cầu đề bài}
 Mô phỏng đáp ứng hệ thống sử dụng mô hình sơ đồ khối trên MATLAB/Simulink. Phân tích 
@@ -415,17 +452,13 @@ và đánh giá đáp ứng hệ thống
 \subsection{Sơ đồ MATLAB/Simulink}
 
 Dựa vào sơ đồ khối ở hình \ref{fig:4}, ta xây dựng được sơ đồ MATLAB/Simulink được cho như hình dưới: 
-
-\begin{landscape}
-
+\newpage
 \begin{figure}[ht]
     \centering
-    \includegraphics[height=0.5\paperheight]{MATLAB_1.pdf}
+    \includegraphics[width=\linewidth]{MATLAB_1.pdf}
     \caption{Sơ đồ MATLAB/Simulink để phân tích hệ thống}
     \label{fig:m1}
 \end{figure}
-\end{landscape}
-
 Trong sơ đồ MATLAB/Simulink hình \ref{fig:m1}, các hàm $F(t)$ đầu vào được khai báo như sau:
 \begin{enumerate}
     \item Hàm Dirac được khai báo bằng khối \textbf{Hàm Dirac}. Khối này là một hệ con (subsystem) được xây dựng dựa vào một bài blog của MATLAB tại địa chỉ \url{https://tinyurl.com/yrh28h2j}.
@@ -436,14 +469,13 @@ Trong sơ đồ MATLAB/Simulink hình \ref{fig:m1}, các hàm $F(t)$ đầu vào
     \end{figure}
 
     \item Hàm nấc đơn vị, sử dụng khối \textbf{Step} được khai báo như hình dưới
-    \vspace{-5mm}
     \begin{figure}[ht]
         \centering
         \includegraphics[width=0.5\linewidth]{MATLAB_3.png}
-        \vspace{-5mm}
         \caption{Khai báo khối \textbf{Step} đối với hàm nấc đơn vị}
     \end{figure}
 
+    \newpage
     \item Đối với hàm \eqref{eqn:hxd}, ta xây dựng bằng hàm \textbf{MATLAB function} như sau:
     \begin{lstlisting}[style=matlabstyle,caption=Khai báo hàm \eqref{eqn:hxd}]
 function F = fcn(t)
@@ -529,6 +561,8 @@ end
     \end{itemize}
 \end{itemize}
 
+
+\newpage
 \section{Thiết kế hệ thống điều khiển}
 \subsection{Thiết kế bộ điều khiển PID cho góc con lắc}
 \subsubsection{Yêu cầu thiết kế}
@@ -596,8 +630,7 @@ Các hệ số của bộ điều khiển PID con lắc là
 
 \subsubsection{Mô phỏng bằng MATLAB/Simulink}
 
-Dưới đây là sơ đồ MATLAB/Simulink cho hệ thống điều khiển con lắc:
-\newpage
+Dưới đây là sơ đồ MATLAB/Simulink cho hệ thống điều khiển con lắc: 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=\linewidth]{MATLAB_4.pdf}
@@ -676,7 +709,6 @@ Các hệ số của bộ điều khiển PID xe đẩy là
 \subsubsection{Mô phỏng bằng MATLAB/Simulink}
 
 Dưới đây là sơ đồ MATLAB/Simulink cho hệ thống điều khiển xe đẩy:
-\newpage
 \begin{figure}[ht]
     \centering
     \includegraphics[width=\linewidth]{MATLAB_7.pdf}
@@ -726,4 +758,38 @@ Kết quả mô phỏng bằng MATLAB/Simulink
 \end{minipage}
 
 
+\subsubsection{Thiết kế bộ điều khiển}
+
+Sử dụng bộ điều khiển tích phân để đảm bảo sai số xác lập nhỏ hơn 2\% cho cả $x$ và $\theta$. Công thức của bộ điều khiển tích phân là:
+\begin{align}
+    \begin{bmatrix}
+        \vb{\dot x} \\
+        \vb{\dot x}_N
+    \end{bmatrix} & = \begin{bmatrix}
+        \vb{A - BK} & \vb{BK_e}\\
+        \vb{-C} & \vb{0}_{2\times 2}
+    \end{bmatrix}\begin{bmatrix}
+        \vb{x} \\
+        \vb{x}_N
+    \end{bmatrix} + \begin{bmatrix}
+        \vb{0}_{4\times 2} \\
+        \vb{I}_{2\times 2}
+    \end{bmatrix} \vb r\\
+    \vb y & = \begin{bmatrix}
+        \vb C & \vb 0_{2\times 2} 
+    \end{bmatrix} \begin{bmatrix}
+        \vb{x} \\
+        \vb{x}_N
+    \end{bmatrix}
+\end{align}
+với $\vb x_N = \begin{bmatrix}
+    x_N \\ \theta_N 
+\end{bmatrix}$ là các vector trạng thái được thêm vào, $\vb K = \begin{bmatrix}
+    k_1 & k_2 & k_3 & k_4
+\end{bmatrix}$ là vector hệ số của bộ điều khiển phản hồi, $\vb K_e = \begin{bmatrix}
+    k_{ex} & k_{e\theta}
+\end{bmatrix}$ là vector hệ số điều khiển sai số tích phân, $\vb r = \begin{bmatrix}
+    x_d \\
+    \theta_d
+\end{bmatrix}$ là vector đầu vào mong muốn, $\vb I$ là ma trận đơn vị và $\vb 0$ là các ma trận không. Kích thước của các ma trận $\vb I$ và $\vb 0$ được ghi ở phía dưới bên phải từng ma trận.
 \end{document}

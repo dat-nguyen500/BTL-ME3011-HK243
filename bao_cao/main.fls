@@ -323,6 +323,10 @@ INPUT /home/datng/.miktex/texmfs/install/fonts/tfm/public/amsfonts/symbols/msam5
 INPUT /home/datng/.miktex/texmfs/install/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /home/datng/.miktex/texmfs/install/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /home/datng/.miktex/texmfs/install/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+INPUT /home/datng/.miktex/texmfs/install/tex/latex/vntex/t5cmtt.fd
+INPUT /home/datng/.miktex/texmfs/install/tex/latex/vntex/t5cmtt.fd
+INPUT /home/datng/.miktex/texmfs/install/tex/latex/vntex/t5cmtt.fd
+INPUT /home/datng/.miktex/texmfs/install/fonts/tfm/vntex/vnr/vntt12.tfm
 INPUT /home/datng/.miktex/texmfs/install/fonts/tfm/vntex/vnr/vnr8.tfm
 INPUT /home/datng/.miktex/texmfs/install/fonts/tfm/vntex/vnr/vnr6.tfm
 INPUT ./MATLAB_1.pdf
@@ -331,10 +335,6 @@ INPUT ./MATLAB_1.pdf
 INPUT ./MATLAB_1.pdf
 INPUT ./MATLAB_1.pdf
 INPUT ./MATLAB_1.pdf
-INPUT /home/datng/.miktex/texmfs/install/tex/latex/vntex/t5cmtt.fd
-INPUT /home/datng/.miktex/texmfs/install/tex/latex/vntex/t5cmtt.fd
-INPUT /home/datng/.miktex/texmfs/install/tex/latex/vntex/t5cmtt.fd
-INPUT /home/datng/.miktex/texmfs/install/fonts/tfm/vntex/vnr/vntt12.tfm
 INPUT ./MATLAB_2.pdf
 INPUT ./MATLAB_2.pdf
 INPUT ./MATLAB_2.pdf
