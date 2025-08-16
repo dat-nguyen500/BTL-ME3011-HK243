@@ -428,7 +428,7 @@ Từ các thông số ở bảng \ref{table:1}, các ma trận của hệ thốn
     \end{bmatrix}
 \end{align}
 
-Sử dụng hàm \texttt{ss2tf} để chuyển đổi từ dạng không gian trạng thái sang dạng hàm truyền, thu được
+Sử dụng hàm \texttt{ss2tf} trong MATLAB để chuyển đổi từ dạng không gian trạng thái sang dạng hàm truyền, thu được
 \begin{align}
     G_1(s) &= \frac{0.5556 s^2 + 4.877 s + 12.11}{s^4 + 11.06 s^3 + 28.02 s^2 + 1.903 s} \\
     G_2(s) &= \frac{1.235s}{s^3 + 11.06 s^2 + 28.02 s + 1.903}
@@ -438,7 +438,7 @@ Sử dụng hàm \texttt{ss2tf} để chuyển đổi từ dạng không gian tr
 Mô phỏng đáp ứng hệ thống sử dụng mô hình sơ đồ khối trên MATLAB/Simulink. Phân tích 
 và đánh giá đáp ứng hệ thống
 \begin{enumerate}
-    \item Với đầu vào $F(t)$ là hàm xung diract (impulse).
+    \item Với đầu vào $F(t)$ là hàm xung Dirac (impulse).
     \item Với đầu vào $F(t)$ là hàm nấc đơn vị (unit step). 
     \item Với đầu vào là như sau:
     \begin{align}
@@ -640,7 +640,7 @@ Dưới đây là sơ đồ MATLAB/Simulink cho hệ thống điều khiển con
 Kết quả mô phỏng bằng MATLAB/Simulink
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\linewidth]{MATLAB_5.pdf}
+    \includegraphics[width=0.645\linewidth]{MATLAB_5.pdf}
     \caption{Kết quả mô phỏng bằng MATLAB/Simulink cho hệ thống điều khiển con lắc}
 \end{figure}
 
@@ -718,11 +718,12 @@ Dưới đây là sơ đồ MATLAB/Simulink cho hệ thống điều khiển xe 
 Kết quả mô phỏng bằng MATLAB/Simulink
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\linewidth]{MATLAB_6.pdf}
+    \includegraphics[width=0.645\linewidth]{MATLAB_6.pdf}
     \caption{Kết quả mô phỏng bằng MATLAB/Simulink cho hệ thống điều khiển xe đẩy}
 \end{figure}
 \subsubsection{Đánh giá, nhận xét}
 
+\newpage
 \subsection{Thiết kế bộ điều khiển không gian trạng thái}
 \subsubsection{Yêu cầu thiết kế}
 \begin{minipage}[t]{0.3\linewidth}
@@ -741,7 +742,7 @@ Kết quả mô phỏng bằng MATLAB/Simulink
     \begin{itemize}[noitemsep,topsep=0pt]
         \item Thời gian xác lập cho $x$ và $\theta$ nhỏ hơn 5 giây.
         \item Thời gian tăng cho $x$ nhỏ hơn 0.5 giây. 
-        \item Độ vột lố tối đa cho $\theta$ nhỏ hơn 0.35 radian (20$^\circ$). 
+        \item Độ vọt lố tối đa cho $\theta$ nhỏ hơn 0.35 radian (20$^\circ$). 
         \item Sai số xác lập nhỏ hơn 2\% cho cả $x$ và $\theta$. 
     \end{itemize}
 \end{minipage}
@@ -760,7 +761,25 @@ Kết quả mô phỏng bằng MATLAB/Simulink
 
 \subsubsection{Thiết kế bộ điều khiển}
 
-Sử dụng bộ điều khiển tích phân để đảm bảo sai số xác lập nhỏ hơn 2\% cho cả $x$ và $\theta$. Công thức của bộ điều khiển tích phân là:
+\paragraph{Kiểm tra tính điều khiển được và quan sát được của hệ thống}\mbox{}
+
+Để có thể thiết kế bộ điều khiển không gian trạng thái, trước tiên ta cần kiểm tra tính điều khiển được và quan sát được của hệ thống. Sử dụng hàm \texttt{ctrb} và \texttt{obsv} trong MATLAB, ta kiểm tra tính điều khiển được và quan sát được của hệ thống.
+\begin{lstlisting}[style=matlabstyle,caption=Kiểm tra tính điều khiển được và quan sát được của hệ thống]
+rank(ctrb(sys.A, sys.B)), rank(obsv(sys.A, sys.C))
+\end{lstlisting}
+
+Hạng của hai ma trận này đều bằng 4, bằng với số các trạng thái của hệ thống, do đó hệ thống là điều khiển được và quan sát được.
+
+\paragraph{Thiết kế bộ điều khiển không gian trạng thái}\mbox{}
+
+Nhóm đề xuất phương pháp thiết kế bộ điều khiển cho bài toán này như sau:
+\begin{enumerate}
+    \item Sử dụng bộ điều khiển tích phân để đảm bảo sai số xác lập nhỏ hơn 2\% cho cả $x$ và $\theta$.
+    \item Tìm cặp cực thống trị theo các yêu cầu thiết kế của vị trí xe đẩy $x$ trước rồi chọn các cực khác xa trục ảo $j\omega$ ít nhất 5 lần so với cặp cực thống trị.
+    \item Điều chỉnh vị trí của các cực khác cực thống trị để đảm bảo các yêu cầu thiết kế về thời gian xác lập và độ vọt lố cho góc lắc $\theta$.
+\end{enumerate} 
+
+\textbf{Đầu tiên}, ta cần triển khai công thức bộ điều khiển tích phân để đảm bảo sai số xác lập nhỏ hơn 2\% cho cả $x$ và $\theta$. Công thức của bộ điều khiển tích phân là:
 \begin{align}
     \begin{bmatrix}
         \vb{\dot x} \\
@@ -792,4 +811,17 @@ với $\vb x_N = \begin{bmatrix}
     x_d \\
     \theta_d
 \end{bmatrix}$ là vector đầu vào mong muốn, $\vb I$ là ma trận đơn vị và $\vb 0$ là các ma trận không. Kích thước của các ma trận $\vb I$ và $\vb 0$ được ghi ở phía dưới bên phải từng ma trận.
+
+
+\textbf{Tiếp theo}, ta tìm cặp cực thống trị cho hệ thống dựa theo các yêu cầu thiết kế của vị trí xe đẩy $x$. Các yêu cầu thiết kế này bao gồm thời gian xác lập $T_s \le 5$ giây và thời gian tăng $T_r\le 0.5$ giây.
+\begin{align*}
+    T_s &= \frac{4}{\omega_n\zeta} = 5\text{ giây}\\
+    T_r &= \frac{1.8}{\omega_n} = 0.5\text{ giây}
+\end{align*} 
+
+Giải hệ trên, ta tìm được $\omega_n = 3.6$ rad/s và $\zeta = 0.5556$. Từ đó, ta tìm được cặp cực thống trị cho vị trí xe đẩy $x$ là:
+$$s_{1,2} = -\omega_n\zeta \pm j \omega_n\sqrt{1-\zeta^2} = -0.8\pm j3.51$$
+
+Đối với các cực khác, ta chọn các cực cách xa trục ảo $j\omega$ ít nhất 5 lần so với cặp cực thống trị. Do đó, ta chọn các cực thực là cực bội bốn cách trục ảo $j\omega$ 5 lần:
+$$s_{3,4,5,6} = -4 +j0$$
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.15)  15 AUG 2025 11:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.15)  16 AUG 2025 08:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -841,42 +841,42 @@ Package pdftex.def Info: thiet_ke_PID_con_lac.png  used on input line 614.
 
 
 [12 <./thiet_ke_PID_con_lac.png>]
-<MATLAB_4.pdf, id=221, 633.36626pt x 176.66pt>
+<MATLAB_4.pdf, id=221, 633.36626pt x 178.6675pt>
 File: MATLAB_4.pdf Graphic file (type pdf)
 <use MATLAB_4.pdf>
 Package pdftex.def Info: MATLAB_4.pdf  used on input line 636.
-(pdftex.def)             Requested size: 469.47049pt x 130.95007pt.
-<MATLAB_5.pdf, id=222, 398.48875pt x 301.125pt>
+(pdftex.def)             Requested size: 469.47049pt x 132.43814pt.
+<MATLAB_5.pdf, id=222, 402.50375pt x 302.12875pt>
 File: MATLAB_5.pdf Graphic file (type pdf)
 <use MATLAB_5.pdf>
 Package pdftex.def Info: MATLAB_5.pdf  used on input line 643.
-(pdftex.def)             Requested size: 469.47049pt x 354.77762pt.
+(pdftex.def)             Requested size: 302.81047pt x 227.29674pt.
 
 
-[13 <./MATLAB_4.pdf>]
-<thiet_ke_PID_xe_day.png, id=248, 1445.4pt x 776.9025pt>
+[13 <./MATLAB_4.pdf> <./MATLAB_5.pdf>]
+<thiet_ke_PID_xe_day.png, id=259, 1445.4pt x 776.9025pt>
 File: thiet_ke_PID_xe_day.png Graphic file (type png)
 <use thiet_ke_PID_xe_day.png>
 Package pdftex.def Info: thiet_ke_PID_xe_day.png  used on input line 693.
 (pdftex.def)             Requested size: 469.47049pt x 252.3362pt.
 
 
-[14 <./MATLAB_5.pdf>]
-<MATLAB_7.pdf, id=263, 558.085pt x 136.51pt>
+[14 <./thiet_ke_PID_xe_day.png>]
+<MATLAB_7.pdf, id=264, 558.085pt x 154.5775pt>
 File: MATLAB_7.pdf Graphic file (type pdf)
 <use MATLAB_7.pdf>
 Package pdftex.def Info: MATLAB_7.pdf  used on input line 714.
-(pdftex.def)             Requested size: 469.47049pt x 114.83841pt.
-<MATLAB_6.pdf, id=264, 398.48875pt x 301.125pt>
+(pdftex.def)             Requested size: 469.47049pt x 130.0376pt.
+<MATLAB_6.pdf, id=265, 402.50375pt x 303.1325pt>
 File: MATLAB_6.pdf Graphic file (type pdf)
 <use MATLAB_6.pdf>
 Package pdftex.def Info: MATLAB_6.pdf  used on input line 721.
-(pdftex.def)             Requested size: 469.47049pt x 354.77762pt.
+(pdftex.def)             Requested size: 302.81047pt x 228.05188pt.
 
 
-[15 <./thiet_ke_PID_xe_day.png> <./MATLAB_7.pdf>]
+[15 <./MATLAB_7.pdf> <./MATLAB_6.pdf>]
 
-[16 <./MATLAB_6.pdf>]
+[16]
 
 [17] (main.aux)
  ***********
@@ -885,15 +885,15 @@ L3 programming layer <2025-07-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 40115 strings out of 468135
- 998361 string characters out of 5435616
- 1817405 words of memory out of 5000000
- 68325 multiletter control sequences out of 15000+600000
+ 40123 strings out of 468135
+ 998461 string characters out of 5435616
+ 1822405 words of memory out of 5000000
+ 68333 multiletter control sequences out of 15000+600000
  650363 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,16n,105p,574b,1881s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx8.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi12.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi8.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy8.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/cm-super/sfrm1200.pfb></home/datng/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnbx12.pfb></home/datng/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnr10.pfb></home/datng/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnr12.pfb></home/datng/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnr17.pfb></home/datng/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnr6.pfb></home/datng/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnr8.pfb></home/datng/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnti12.pfb></home/datng/.miktex/texmfs/install/fonts/type1/vntex/vnr/vntt10.pfb></home/datng/.miktex/texmfs/install/fonts/type1/vntex/vnr/vntt12.pfb>
-Output written on main.pdf (18 pages, 772600 bytes).
+Output written on main.pdf (18 pages, 819340 bytes).
 PDF statistics:
  401 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
