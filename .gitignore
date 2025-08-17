@@ -6,7 +6,6 @@ slprj/
 *.mat
 *.autosave
 codegen/
-matlab_r2021a/
 
 # LaTeX files
 *.aux
