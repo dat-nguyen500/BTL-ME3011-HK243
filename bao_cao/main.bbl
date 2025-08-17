@@ -1,0 +1,27 @@
+\begin{thebibliography}{1}
+
+\bibitem{matlabimpulse}
+{MathWorks}.
+\newblock {\em MATLAB Documentation}.
+\newblock MathWorks Inc., 2024.
+\newblock Đã truy cập: 2025-08-17.
+\newblock URL:
+  \url{https://blogs.mathworks.com/simulink/2024/08/23/how-can-i-create-an-impulse-delta-signal-in-simulink/}.
+
+\bibitem{matlabstepinfo}
+{MathWorks}.
+\newblock {\em stepinfo - Rise time, settling time, and other step-response
+  characteristics}.
+\newblock MathWorks Inc., 2025.
+\newblock Đã truy cập: 2025-08-17.
+\newblock URL:
+  \url{https://www.mathworks.com/help/control/ref/dynamicsystem.stepinfo.html}.
+
+\bibitem{sundaram2014ece380}
+Shreyas Sundaram.
+\newblock Ece 380: Control systems, course notes, 2014.
+\newblock Đã truy cập: 2025-08-17.
+\newblock URL:
+  \url{https://engineering.purdue.edu/~sundara2/misc/ece380_notes.pdf}.
+
+\end{thebibliography}

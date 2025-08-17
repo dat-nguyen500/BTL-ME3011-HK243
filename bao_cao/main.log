@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.15)  16 AUG 2025 08:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.15)  16 AUG 2025 23:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -652,25 +652,31 @@ File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
 File: listings.cfg 2024/09/23 1.10c listings configuration
 ))
 Package: listings 2024/09/23 1.10c (Carsten Heinz)
- (main.aux)
+ (/home/datng/.miktex/texmfs/install/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip57
+\bibsep=\skip58
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count346
+) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -708,40 +714,61 @@ LaTeX Font Info:    ... okay on input line 44.
 
 (/home/datng/.miktex/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count346
+\scratchcounter=\count347
 \scratchdimen=\dimen317
 \scratchbox=\box72
-\nofMPsegments=\count347
-\nofMParguments=\count348
+\nofMPsegments=\count348
+\nofMParguments=\count349
 \everyMPshowfont=\toks42
-\MPscratchCnt=\count349
+\MPscratchCnt=\count350
 \MPscratchDim=\dimen318
-\MPnumerator=\count350
-\makeMPintoPDFobject=\count351
+\MPnumerator=\count351
+\makeMPintoPDFobject=\count352
 \everyMPtoPDFconversion=\toks43
 ) (/home/datng/.miktex/texmfs/install/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+ (/home/datng/.miktex/texmfs/install/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (/home/datng/.miktex/texmfs/install/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+ (/home/datng/.miktex/texmfs/install/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)) (/home/datng/.miktex/texmfs/install/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+ (/home/datng/.miktex/texmfs/install/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+) (/home/datng/.miktex/texmfs/install/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)) (/home/datng/.miktex/texmfs/install/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
  (/home/datng/.miktex/texmfs/install/tex/latex/00miktex/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count352
+\c@lstlisting=\count353
 
 
 pdfTeX warning: pdflatex (file ./logo_bk.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 <logo_bk.pdf, id=4, 47.17625pt x 47.17625pt>
 File: logo_bk.pdf Graphic file (type pdf)
 <use logo_bk.pdf>
-Package pdftex.def Info: logo_bk.pdf  used on input line 77.
+Package pdftex.def Info: logo_bk.pdf  used on input line 79.
 (pdftex.def)             Requested size: 188.70447pt x 188.70447pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 90.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 92.
 (/home/datng/.miktex/texmfs/install/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 90.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 92.
  (/home/datng/.miktex/texmfs/install/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -757,7 +784,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [1]
 
 [2]
-Overfull \hbox (26.48825pt too wide) detected at line 207
+Overfull \hbox (26.48825pt too wide) detected at line 209
 [][][]
  []
 
@@ -770,7 +797,7 @@ Overfull \hbox (26.48825pt too wide) detected at line 207
 [5]
 
 [6]
-LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 431.
+LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 433.
  (/home/datng/.miktex/texmfs/install/tex/latex/vntex/t5cmtt.fd
 File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
@@ -779,17 +806,17 @@ File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 <MATLAB_1.pdf, id=59, 794.97pt x 614.295pt>
 File: MATLAB_1.pdf Graphic file (type pdf)
 <use MATLAB_1.pdf>
-Package pdftex.def Info: MATLAB_1.pdf  used on input line 458.
+Package pdftex.def Info: MATLAB_1.pdf  used on input line 460.
 (pdftex.def)             Requested size: 469.47049pt x 362.77771pt.
 <MATLAB_2.pdf, id=60, 398.48875pt x 69.25874pt>
 File: MATLAB_2.pdf Graphic file (type pdf)
 <use MATLAB_2.pdf>
-Package pdftex.def Info: MATLAB_2.pdf  used on input line 467.
+Package pdftex.def Info: MATLAB_2.pdf  used on input line 469.
 (pdftex.def)             Requested size: 469.47049pt x 81.59883pt.
 <MATLAB_3.png, id=61, 435.87843pt x 408.02437pt>
 File: MATLAB_3.png Graphic file (type png)
 <use MATLAB_3.png>
-Package pdftex.def Info: MATLAB_3.png  used on input line 474.
+Package pdftex.def Info: MATLAB_3.png  used on input line 476.
 (pdftex.def)             Requested size: 234.73524pt x 219.7322pt.
 
 
@@ -801,32 +828,32 @@ File: lstlang1.sty 2024/09/23 1.10c listings language file
 <phan_tich_x_dirac.pdf, id=136, 400.49625pt x 301.125pt>
 File: phan_tich_x_dirac.pdf Graphic file (type pdf)
 <use phan_tich_x_dirac.pdf>
-Package pdftex.def Info: phan_tich_x_dirac.pdf  used on input line 500.
+Package pdftex.def Info: phan_tich_x_dirac.pdf  used on input line 502.
 (pdftex.def)             Requested size: 232.38559pt x 174.73073pt.
 <phan_tich_theta_dirac.pdf, id=137, 398.48875pt x 301.125pt>
 File: phan_tich_theta_dirac.pdf Graphic file (type pdf)
 <use phan_tich_theta_dirac.pdf>
-Package pdftex.def Info: phan_tich_theta_dirac.pdf  used on input line 505.
+Package pdftex.def Info: phan_tich_theta_dirac.pdf  used on input line 507.
 (pdftex.def)             Requested size: 232.38559pt x 175.60373pt.
 <phan_tich_x_step.pdf, id=138, 401.5pt x 301.125pt>
 File: phan_tich_x_step.pdf Graphic file (type pdf)
 <use phan_tich_x_step.pdf>
-Package pdftex.def Info: phan_tich_x_step.pdf  used on input line 524.
+Package pdftex.def Info: phan_tich_x_step.pdf  used on input line 526.
 (pdftex.def)             Requested size: 232.38559pt x 174.29422pt.
 <phan_tich_theta_step.pdf, id=139, 401.5pt x 301.125pt>
 File: phan_tich_theta_step.pdf Graphic file (type pdf)
 <use phan_tich_theta_step.pdf>
-Package pdftex.def Info: phan_tich_theta_step.pdf  used on input line 529.
+Package pdftex.def Info: phan_tich_theta_step.pdf  used on input line 531.
 (pdftex.def)             Requested size: 232.38559pt x 174.29422pt.
 <phan_tich_x_f.pdf, id=140, 401.5pt x 301.125pt>
 File: phan_tich_x_f.pdf Graphic file (type pdf)
 <use phan_tich_x_f.pdf>
-Package pdftex.def Info: phan_tich_x_f.pdf  used on input line 548.
+Package pdftex.def Info: phan_tich_x_f.pdf  used on input line 550.
 (pdftex.def)             Requested size: 232.38559pt x 174.29422pt.
 <phan_tich_theta_f.pdf, id=141, 401.5pt x 301.125pt>
 File: phan_tich_theta_f.pdf Graphic file (type pdf)
 <use phan_tich_theta_f.pdf>
-Package pdftex.def Info: phan_tich_theta_f.pdf  used on input line 553.
+Package pdftex.def Info: phan_tich_theta_f.pdf  used on input line 555.
 (pdftex.def)             Requested size: 232.38559pt x 174.29422pt.
 
 
@@ -836,7 +863,7 @@ Package pdftex.def Info: phan_tich_theta_f.pdf  used on input line 553.
 <thiet_ke_PID_con_lac.png, id=215, 1445.4pt x 776.9025pt>
 File: thiet_ke_PID_con_lac.png Graphic file (type png)
 <use thiet_ke_PID_con_lac.png>
-Package pdftex.def Info: thiet_ke_PID_con_lac.png  used on input line 614.
+Package pdftex.def Info: thiet_ke_PID_con_lac.png  used on input line 616.
 (pdftex.def)             Requested size: 469.47049pt x 252.3362pt.
 
 
@@ -844,12 +871,12 @@ Package pdftex.def Info: thiet_ke_PID_con_lac.png  used on input line 614.
 <MATLAB_4.pdf, id=221, 633.36626pt x 178.6675pt>
 File: MATLAB_4.pdf Graphic file (type pdf)
 <use MATLAB_4.pdf>
-Package pdftex.def Info: MATLAB_4.pdf  used on input line 636.
+Package pdftex.def Info: MATLAB_4.pdf  used on input line 638.
 (pdftex.def)             Requested size: 469.47049pt x 132.43814pt.
 <MATLAB_5.pdf, id=222, 402.50375pt x 302.12875pt>
 File: MATLAB_5.pdf Graphic file (type pdf)
 <use MATLAB_5.pdf>
-Package pdftex.def Info: MATLAB_5.pdf  used on input line 643.
+Package pdftex.def Info: MATLAB_5.pdf  used on input line 645.
 (pdftex.def)             Requested size: 302.81047pt x 227.29674pt.
 
 
@@ -857,7 +884,7 @@ Package pdftex.def Info: MATLAB_5.pdf  used on input line 643.
 <thiet_ke_PID_xe_day.png, id=259, 1445.4pt x 776.9025pt>
 File: thiet_ke_PID_xe_day.png Graphic file (type png)
 <use thiet_ke_PID_xe_day.png>
-Package pdftex.def Info: thiet_ke_PID_xe_day.png  used on input line 693.
+Package pdftex.def Info: thiet_ke_PID_xe_day.png  used on input line 695.
 (pdftex.def)             Requested size: 469.47049pt x 252.3362pt.
 
 
@@ -865,12 +892,12 @@ Package pdftex.def Info: thiet_ke_PID_xe_day.png  used on input line 693.
 <MATLAB_7.pdf, id=264, 558.085pt x 154.5775pt>
 File: MATLAB_7.pdf Graphic file (type pdf)
 <use MATLAB_7.pdf>
-Package pdftex.def Info: MATLAB_7.pdf  used on input line 714.
+Package pdftex.def Info: MATLAB_7.pdf  used on input line 716.
 (pdftex.def)             Requested size: 469.47049pt x 130.0376pt.
 <MATLAB_6.pdf, id=265, 402.50375pt x 303.1325pt>
 File: MATLAB_6.pdf Graphic file (type pdf)
 <use MATLAB_6.pdf>
-Package pdftex.def Info: MATLAB_6.pdf  used on input line 721.
+Package pdftex.def Info: MATLAB_6.pdf  used on input line 723.
 (pdftex.def)             Requested size: 302.81047pt x 228.05188pt.
 
 
@@ -878,24 +905,36 @@ Package pdftex.def Info: MATLAB_6.pdf  used on input line 721.
 
 [16]
 
-[17] (main.aux)
+[17] (main.bbl
+Underfull \hbox (badness 3229) in paragraph at lines 4--10
+[]\T5/cmr/m/n/12 MathWorks.  \T5/cmr/m/it/12 MAT-LAB Doc-u-men-ta-tion\T5/cmr/m/n/12 .  Math-Works Inc., 2024.  ^^^¢ truy
+ []
+
+
+Underfull \hbox (badness 4543) in paragraph at lines 4--10
+\T5/cmr/m/n/12 cªp: 2025-08-17.  URL: $\T5/cmtt/m/n/12 https : / / blogs . mathworks . com / simulink / 2024 / 08 / 23 /
+ []
+
+)
+
+[18] (main.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 40123 strings out of 468135
- 998461 string characters out of 5435616
- 1822405 words of memory out of 5000000
- 68333 multiletter control sequences out of 15000+600000
+ 40990 strings out of 468135
+ 1013093 string characters out of 5435616
+ 1836540 words of memory out of 5000000
+ 69165 multiletter control sequences out of 15000+600000
  650363 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,16n,105p,574b,1881s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx8.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi12.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi8.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy8.pfb></home/datng/.miktex/texmfs/install/fonts/type1/public/cm-super/sfrm1200.pfb></home/datng/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnbx12.pfb></home/datng/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnr10.pfb></home/datng/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnr12.pfb></home/datng/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnr17.pfb></home/datng/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnr6.pfb></home/datng/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnr8.pfb></home/datng/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnti12.pfb></home/datng/.miktex/texmfs/install/fonts/type1/vntex/vnr/vntt10.pfb></home/datng/.miktex/texmfs/install/fonts/type1/vntex/vnr/vntt12.pfb>
-Output written on main.pdf (18 pages, 819340 bytes).
+Output written on main.pdf (19 pages, 827061 bytes).
 PDF statistics:
- 401 PDF objects out of 1000 (max. 8388607)
+ 405 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  93 words of extra memory for PDF output out of 10000 (max. 10000000)
 
