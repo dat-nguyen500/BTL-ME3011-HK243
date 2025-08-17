@@ -37,11 +37,11 @@ function [K, Ke, sysC, thong_tin] = bo_dieu_khien_con_lac_xe_day(sys, p, max_tim
     K = [K1 K2 K3 K4];
     Ke = [Kex Ketheta];
 
-    % Thông tin đáp ứng của hệ với đầu vào là [xd θd] = [1 0]
-    % Do hệ cần 2 đầu vào mà đầu vào θd (góc lắc mong muốn) luôn bằng 0
-    % Nên chỉ cần cung cấp một hàm nấc đơn vị cho hệ sysc(:,1)
+    % Thong tin dap ung cua he voi dau vao la [xd theta_d] = [1 0]
+    % Do he can 2 dau vao ma dau vao theta_d (goc lac mong muon) luon bang 0
+    % Nen chi can cung cap mot ham nac don vi cho he sysc(:,1)
     thong_tin = stepinfo(sysC(:,1)); 
-    fprintf("Đáp ứng của vị trí xe đẩy x với đầu vào [xd θd] = [1 0]:\n");
+    fprintf("Dap ung cua vi tri xe day x voi dau vao [xd theta_d] = [1 0]:\n");
     fprintf("Thời gian tăng: %f giây.\n", thong_tin(1).RiseTime);
     fprintf("Thời gian xác lập: %f giây.\n", thong_tin(1).SettlingTime);
     fprintf("Độ vọt lố : %f%%.\n", thong_tin(1).Overshoot);

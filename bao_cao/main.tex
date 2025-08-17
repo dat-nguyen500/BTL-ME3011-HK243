@@ -19,8 +19,7 @@
 \usepackage{xcolor}
 \usepackage[numbers]{natbib}
 \bibliographystyle{plainurl}
-
-% Định nghĩa style cho MATLAB
+% Định nghĩa style cho MATLAB với xử lý UTF-8 tốt hơn
 \lstdefinestyle{matlabstyle}{
     language=Matlab,
     basicstyle=\ttfamily\small,       % Font code
@@ -39,7 +38,11 @@
     tabsize=4,                        
     breaklines=true,                  % Tự xuống dòng
     breakatwhitespace=false,
-    escapeinside={\%*}{*)}            % Chèn code LaTeX trong code
+    escapeinside={\%*}{*)},           % Chèn code LaTeX trong code
+    inputencoding=utf8,               % Xử lý UTF-8
+    extendedchars=true,
+    columns=fixed,
+    keepspaces=true
 }
 
 \setcounter{secnumdepth}{4}
@@ -966,6 +969,12 @@ Ta thấy, các yêu cầu thiết kế đều được thỏa mãn với cặp 
 \end{align*}
 
 \textbf{Nhận xét:} 
+
+
+
+
+\newpage
+
 
 \newpage
 \bibliography{references}
