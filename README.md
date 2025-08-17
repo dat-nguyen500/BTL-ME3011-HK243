@@ -23,8 +23,9 @@ Các tệp tin được chia làm 2 phần
     - Tệp `PID_xe_day.mat` chứa các hệ số PID của bộ điều khiển xe đẩy.
     - Tệp `thiet_ke_PID_con_lac.mat` là quá trình thiết kế bộ điều khiển PID con lắc bằng phương pháp quỹ đạo nghiệm số.
     - Tệp `thiet_ke_PID_xe_day.mat` là quá trình thiết kế bộ điều khiển PID xe đẩy bằng phương pháp quỹ đạo nghiệm số.
-    - Tệp `phan_tich_he_thong_ode.slx` được dùng để phân tích hệ thống xe đẩy, chỉ được dùng bên trong tệp `task.mlx`.
-    - Tệp `kiem_chung_con_lac.slx` được dùng để kiểm chứng hệ thống xe đẩy, chỉ được dùng bên trong tệp `task.mlx`.
+    - Tệp `phan_tich_he_thong_ode.slx` được dùng để phân tích hệ thống xe đẩ-con lắc, chỉ được dùng bên trong tệp `task.mlx`.
+    - Tệp `kiem_chung_con_lac.slx` được dùng để kiểm chứng bộ điều khiển PID hệ thống con lắc và xem đáp ứng của xe đẩy, chỉ được dùng bên trong tệp `task.mlx`.
+    - Tệp `kiem_chung_xe_day.slx` được dùng để kiểm chứng bộ điều khiển PID hệ thống xe đẩy và xem đáp ứng của con lắc, chỉ được dùng bên trong tệp `task.mlx`.
 
 
 ***Lưu ý*** Các tệp tin được xuất ra từ MATLAB/Simulink R2025a. Phiên bản của các tệp tin này cho MATLAB/Simulink R2021a nằm trong thư mục `matlab_r2021a`.
@@ -45,4 +46,17 @@ Các bước để có thể chạy các tệp tin MATLAB/Simulink:
 
 1. Mở thư mục chứa toàn bộ các tệp tin MATLAB/Simulink của bài tập lớn này.
 2. Mở tệp tin `task.mlx`.
-3. Chọn một section bất kỳ và nhấn 
+3. Chọn một section bất kỳ (được ngăn cách với nhau qua các đường gạch ngang) và nhấn `Run Section`.
+
+![Hướng dẫn chạy mã MATLAB/Simulink](img/image_2.png)
+
+### Về các tệp tin quá trình thiết kế bộ điều khiển PID
+
+Có 2 tệp tin là `thiet_ke_PID_con_lac.mat` và `thiet_ke_PID_xe_day.mat` chứa quá trình thiết kế bộ điều khiển PID của con lắc và xe đẩy. Các bước để xem 2 tệp này như sau
+1. Chạy lệnh sau trong MATLAB Terminal
+```MATLAB
+controlSystemDesigner
+```
+2. Cửa sổ Control System Designer hiện ra và chọn tệp tin muốn mở để xem rồi nhấn `Open`.
+
+![Hướng dẫn xem tệp tin thiết kế](img/image_3.png)
