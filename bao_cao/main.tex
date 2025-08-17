@@ -95,13 +95,13 @@
         \textit{Thành viên nhóm} & 
     \end{tabular}
 
-    \begin{tabularx}{0.75\linewidth}{|X|c|c|}
+    \begin{tabular}{|l|c|l|}
         \hline
         \multicolumn{1}{|c|}{\textbf{\textbf{Họ và tên}}} & \textbf{MSSV} & \multicolumn{1}{c|}{\textbf{Nhiệm vụ chính}}\\ \hline
-        Nguyễn Đức Đạt & 211100\textcolor{red}{9} & \\ \hline
-        Trần Quang Đạo & 221064\textcolor{red}{7} & \\ \hline
+        Nguyễn Đức Đạt & 211100\textcolor{red}{9} & Viết báo cáo, thiết kế bộ điều khiển \\ \hline
+        Trần Quang Đạo & 221064\textcolor{red}{7} & Thiết kế bộ điều khiển, lập trình MATLAB \\ \hline
         Thành viên bí mật & XXXXXX\textcolor{red}{2} & Cung cấp chữ số cuối MSSV\\ \hline
-    \end{tabularx}
+    \end{tabular}
 
     \vspace{3\baselineskip}
 
@@ -137,6 +137,14 @@ Với hệ thống con lắc trên xe đẩy, giả sử các thông số sau:
     \caption{Bảng thông số hệ thống}
     \label{table:1}
 \end{table}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{crane.png}
+    \caption{Mô hình cần cẩu tháp}
+\end{figure}
+
+Toàn bộ các tệp tin báo cáo, MATLAB/Simulink của bài tập lớn này được lưu tại địa chỉ \url{https://github.com/dat-nguyen500/bai_tap_lon_ME3011_HK243.git}. Truy cập vào đường dẫn này và đọc kỹ hướng dẫn để có thể chạy được các tệp tin MATLAB/Simulink.
 
 \newpage
 \section{Mô hình hóa}
@@ -795,13 +803,13 @@ Nhóm đề xuất phương pháp thiết kế bộ điều khiển cho bài to�
     \end{bmatrix} + \begin{bmatrix}
         \vb{0}_{4\times 2} \\
         \vb{I}_{2\times 2}
-    \end{bmatrix} \vb r\\
+    \end{bmatrix} \vb r \label{eqn:ss1}\\
     \vb y & = \begin{bmatrix}
         \vb C & \vb 0_{2\times 2} 
     \end{bmatrix} \begin{bmatrix}
         \vb{x} \\
         \vb{x}_N
-    \end{bmatrix}
+    \end{bmatrix}\label{eqn:ss2}
 \end{align}
 với $\vb x_N = \begin{bmatrix}
     x_N \\ \theta_N 
@@ -814,6 +822,28 @@ với $\vb x_N = \begin{bmatrix}
     \theta_d
 \end{bmatrix}$ là vector đầu vào mong muốn, $\vb I$ là ma trận đơn vị và $\vb 0$ là các ma trận không. Kích thước của các ma trận $\vb I$ và $\vb 0$ được ghi ở phía dưới bên phải từng ma trận.
 
+Sử dụng phương pháp đặt cực, ta có các cực đã chọn trước đó là $s_1, s_2,s_3,s_4, s_5$ và $s_6$ là nghiệm của đa thức 
+\begin{align}
+    (s-s_1))(s-s_2)(s-s_3)(s-s_4)(s-s_5)(s-s_6) =0 \label{eqn:poly1}
+\end{align}
+
+Đa thức đặc trưng của hệ \eqref{eqn:ss1} và \eqref{eqn:ss2} là
+\begin{align}
+    \det \left(s\vb I -  \begin{bmatrix}
+        \vb{A - BK} & \vb{BK_e}\\
+        \vb{-C} & \vb{0}_{2\times 2}
+    \end{bmatrix}\right) = 0 \label{eqn:poly2}
+\end{align}
+
+Bằng cách so sánh các hệ số của đa thức \eqref{eqn:poly1} và \eqref{eqn:poly2}, ta tìm được các hệ số của bộ điều khiển phản hồi $\vb K$ và bộ điều khiển sai số tích phân $\vb K_e$. Ta sẽ thiết kế bộ điều khiển với đầu vào là
+\begin{align}
+    \vb r = \begin{bmatrix}
+        x_d \\
+        \theta_d
+    \end{bmatrix} = \begin{bmatrix}
+        1 \\ 0
+    \end{bmatrix}
+\end{align}
 
 \textbf{Tiếp theo}, ta tìm cặp cực thống trị cho hệ thống dựa theo các yêu cầu thiết kế của vị trí xe đẩy $x$. Các yêu cầu thiết kế này bao gồm thời gian xác lập $T_s \le 5$ giây và thời gian tăng $T_r\le 0.5$ giây. 
 \begin{align*}
@@ -826,9 +856,114 @@ với $\vb x_N = \begin{bmatrix}
 Giải hệ trên, ta tìm được $\omega_n = 3.6$ rad/s và $\zeta = 0.5556$. Từ đó, ta tìm được cặp cực thống trị cho vị trí xe đẩy $x$ là:
 $$s_{1,2} = -\omega_n\zeta \pm j \omega_n\sqrt{1-\zeta^2} = -0.8\pm j3.51$$
 
-Đối với các cực khác, ta chọn các cực cách xa trục ảo $j\omega$ ít nhất 5 lần so với cặp cực thống trị. Do đó, ta chọn các cực thực là cực bội bốn cách trục ảo $j\omega$ 5 lần:
-$$s_{3,4,5,6} = -4 +j0$$
+Đối với các cực khác, ta chọn các cực cách xa trục ảo $j\omega$ ít nhất 5 lần so với cặp cực thống trị. Do đó, ta chọn các cực thực là cực bội bốn cách trục ảo $j\omega$ 10 lần:
+$$s_{3,4,5,6} = -8 +j0$$
 
+
+Với các cực $s_{3,4,5,6} = -8 +j0$, đáp ứng của hệ thống như sau:
+
+\begin{itemize}
+    \item Thời gian xác lập của $x$ là $T_s = 2.701 < 5$ giây (thỏa mãn).
+    \item Thời gian tăng của $x$ là $T_r = 0.164 < 0.5$ giây (thỏa mãn).
+    \item Đỉnh của $\theta$ là $\theta_{\max} = 0.971 > 0.35$ rad (không thỏa mãn).
+\end{itemize}
+
+\newpage 
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.75\linewidth]{ss10.pdf}
+    \caption{Đáp ứng của hệ thống với các cực $s_{3,4,5,6} = -8 +j0$}
+\end{figure}
+
+Tiếp tục cho các các cực $s_{3,4,5,6} = -12 +j0$ (xa trục ảo $j\omega$ gấp 15 lần cặp cực thốn trị), đáp ứng của hệ thống như sau:
+
+\vspace{2\baselineskip}
+
+{
+    \centering
+    \captionsetup{type=figure}
+    \includegraphics[width=0.75\linewidth]{ss15.pdf}
+    \caption{Đáp ứng của hệ thống với các cực $s_{3,4,5,6} = -12 +j0$}
+}
+
+\newpage
+
+\begin{itemize}
+    \item Thời gian xác lập của $x$ là $T_s = 1.657 < 5$ giây (thỏa mãn).
+    \item Thời gian tăng của $x$ là $T_r = 0.115 < 0.5$ giây (thỏa mãn).
+    \item Đỉnh của $\theta$ là $\theta_{\max} = 1.24 > 0.35$ rad (không thỏa mãn).
+\end{itemize}
+
+\textbf{Nhận xét:} Ta thấy khi các cực $s_{3,4,5,6}$ càng xa trục ảo $j\omega$ thì đáp ứng của của vị trí xe đẩy $x$ càng nhanh hơn (thỏa mãn các yêu cầu đề bài) nhưng giá trị góc lắc tối đa $\theta_{\max}$ cũng tăng lớn hơn yêu cầu đề bài cho ($\theta_{\max} \le 0.35$). Do đó, ở bước tiếp theo, các cực $s_{3,4,5,6}$ sẽ được thu ngắn khoảng cách với trục ảo $j\omega$ để đảm bảo đáp ứng của góc lắc.
+
+\textbf{Lần lượt}, ta thử với $s_{3,4,5,6}=-4+j0$ (cách trục ảo $j\omega$ 5 lần so với cặp cực thống trị) và $s_{3,4,5,6}=-0.8+j0 $ (bằng khoảng cách tới trục ảo $j\omega$ của cặp cực thống trị).
+
+Với $s_{3,4,5,6}=-4+j0$, đáp ứng của hệ thống như sau:
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.75\linewidth]{ss5.pdf}
+    \caption{Đáp ứng của hệ thống với các cực $s_{3,4,5,6} = -4 +j0$}
+\end{figure}
+
+\begin{itemize}
+    \item Thời gian xác lập của $x$ là $T_s = 6.443 > 5$ giây (không thỏa mãn).
+    \item Thời gian tăng của $x$ là $T_r = 0.284 < 0.5$ giây (thỏa mãn).
+    \item Đỉnh của $\theta$ là $\theta_{\max} = 0.720 > 0.35$ rad (không thỏa mãn).
+\end{itemize}
+
+\newpage
+
+Với $s_{3,4,5,6}=-0.8+j0$, đáp ứng của hệ thống như sau:
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.75\linewidth]{ss1.pdf}
+    \caption{Đáp ứng của hệ thống với các cực $s_{3,4,5,6} = -0.8 +j0$}
+\end{figure}
+
+\begin{itemize}
+    \item Thời gian xác lập của $x$ là $T_s = 5.483 > 5$ giây (không thỏa mãn).
+    \item Thời gian tăng của $x$ là $T_r = 1.993 > 0.5$ giây (không thỏa mãn).
+    \item Đỉnh của $\theta$ là $\theta_{\max} = 0.061 < 0.35$ rad (thỏa mãn).
+\end{itemize}
+
+\textbf{Nhận xét:} Ta thấy rằng khi các cực $s_{3,4,5,6}$ gần trục ảo $j\omega$ thì đáp ứng của vị trí xe đẩy $x$ chậm hơn (không thỏa mãn các yêu cầu đề bài) nhưng giá trị $\theta_{max}$ sẽ giảm dần và thỏa mãn yêu cầu $\theta_{\max} < 0.35$. Do đó, để thỏa mãn các yêu cầu thiết kế, nhóm quyết định chọn các cực $s_{3,4} = -0.8 +j0$ (cách trục ảo $j\omega$ 1 lần so với cặp cực thống trị) và $s_{5,6}=-12 + j0$ (cách trục ảo $j\omega$ 12 lần so với cặp cực thống trị).
+
+\textbf{Cuối cùng,} ta sẽ chọn các cực như sau cho bộ điều khiển không gian trạng thái:
+\begin{align*}
+    s_{1,2} &= -0.8 \pm j3.51\\
+    s_{3,4} &= -0.8 + j0\\
+    s_{5,6} &= -12 + j0
+\end{align*}
+
+Đáp ứng của hệ thống với các cực này như sau:
+
+\begin{itemize}
+    \item Thời gian xác lập của $x$ là $T_s = 3.938 < 5$ giây (thỏa mãn).
+    \item Thời gian tăng của $x$ là $T_r = 0.48 < 0.5$ giây (thỏa mãn).
+    \item Đỉnh của $\theta$ là $\theta_{\max} = 0.299 < 0.35$ rad (thỏa mãn).
+\end{itemize}
+
+\newpage
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.75\linewidth]{ssc.pdf}
+    \caption{Đáp ứng của hệ thống với các cực $s_{3,4} = -0.8 +j0$ và $s_{5,6}=-12 + j0$}
+\end{figure}
+
+Ta thấy, các yêu cầu thiết kế đều được thỏa mãn với cặp cực đã chọn. Do đó, ta có thể xác định được các hệ số của bộ điều khiển không gian trạng thái $\vb K$ và $\vb K_e$.
+
+\begin{align*}
+    \vb K &= \begin{bmatrix}
+        125.1355   & 8.6949  &  78.5829  &  9.1597
+    \end{bmatrix}\\
+    \vb K_e& = \begin{bmatrix}
+        275.1610         & 0
+    \end{bmatrix}
+\end{align*}
 
 \newpage
 \bibliography{references}
