@@ -28,7 +28,7 @@ Các tệp tin được chia làm 2 phần
     - Tệp `kiem_chung_xe_day.slx` được dùng để kiểm chứng bộ điều khiển PID hệ thống xe đẩy và xem đáp ứng của con lắc, chỉ được dùng bên trong tệp `task.mlx`.
 
 
-***Lưu ý*** Các tệp tin được xuất ra từ MATLAB/Simulink R2025a. Phiên bản của các tệp tin này cho MATLAB/Simulink R2021a nằm trong thư mục `matlab_r2021a`.
+***Lưu ý*** Các tệp tin được xuất ra từ MATLAB/Simulink R2025a. Phiên bản của các tệp tin này cho MATLAB/Simulink R2021b nằm trong thư mục `matlab_r2021b`.
 
 ## Hướng dẫn sử dụng
 
