@@ -7,7 +7,7 @@
 | STT | Họ và tên         | Mã số sinh viên | Nhiệm vụ |
 | --- | ----------------- | --------------- | -------- |
 | 1   | Nguyễn Đức Đạt    | 2111009         |          |
-| 2   | Trần Quang Đạo    |                 |          |
+| 2   | Trần Quang Đạo    | 2210647                |          |
 | 3   | Thành viên bí mật | XXXXXX2         | Cung cấp chữ số cuối MSSV |
 
 
