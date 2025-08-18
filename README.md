@@ -60,3 +60,129 @@ controlSystemDesigner
 2. Cửa sổ Control System Designer hiện ra và chọn tệp tin muốn mở để xem rồi nhấn `Open`.
 
 ![Hướng dẫn xem tệp tin thiết kế](img/image_3.png)
+
+## Hàm `bo_dieu_khien_con_lac_xe_day()`
+
+Hàm này được thiết kế để tạo bộ điều khiển không gian trạng thái mở rộng (augmented state space controller) cho hệ thống xe đẩy-con lắc với khả năng theo dõi tín hiệu tham chiếu và loại bỏ sai số xác lập.
+
+### Cú pháp
+
+```matlab
+[K, Ke, sysC, thong_tin] = bo_dieu_khien_con_lac_xe_day(sys, p, max_time)
+```
+
+### Tham số đầu vào
+
+- `sys`: Hệ thống state space ban đầu của xe đẩy-con lắc (dạng `ss`)
+- `p`: Vector chứa 6 cực mong muốn của hệ thống điều khiển mở rộng
+- `max_time`: Thời gian tối đa để hiển thị đồ thị đáp ứng
+
+### Tham số đầu ra
+
+- `K`: Vector hệ số phản hồi trạng thái $\mathbf{K} = [k_1, k_2, k_3, k_4]$
+- `Ke`: Vector hệ số phản hồi tích phân $\mathbf{K}_e = [k_{ex}, k_{e\theta}]$
+- `sysC`: Hệ thống vòng kín mở rộng (6×2, có tích phân để loại bỏ sai số xác lập)
+- `thong_tin`: Thông số đáp ứng của hệ thống (rise time, settling time, overshoot, etc.)
+
+### Nguyên lý hoạt động
+
+#### 1. Thiết kế bộ điều khiển mở rộng với tích phân
+
+Hàm này sử dụng phương pháp **augmented state space** để thiết kế bộ điều khiển có khả năng loại bỏ sai số xác lập. Hệ thống được mở rộng bằng cách thêm các trạng thái tích phân của lỗi:
+
+**Hệ thống gốc (4 trạng thái):**
+$$\dot{\mathbf{x}}(t) = \mathbf{A}\mathbf{x}(t) + \mathbf{B}\mathbf{u}(t)$$
+$$\mathbf{y}(t) = \mathbf{C}\mathbf{x}(t)$$
+
+**Hệ thống mở rộng (6 trạng thái):**
+$$\begin{bmatrix} \dot{\mathbf{x}}(t) \\ \dot{\mathbf{x}}_N(t) \end{bmatrix} = \begin{bmatrix} \mathbf{A} - \mathbf{B}\mathbf{K} & \mathbf{B}\mathbf{K}_e \\ -\mathbf{C} & \mathbf{0}_{2 \times 2} \end{bmatrix} \begin{bmatrix} \mathbf{x}(t) \\ \mathbf{x}_N(t) \end{bmatrix} + \begin{bmatrix} \mathbf{0}_{4 \times 2} \\ \mathbf{I}_{2 \times 2} \end{bmatrix} \mathbf{r}(t)$$
+
+Trong đó:
+- $\mathbf{x}_N(t)$: Vector trạng thái tích phân của lỗi
+- $\mathbf{K}$: Ma trận phản hồi trạng thái chính
+- $\mathbf{K}_e$: Ma trận phản hồi trạng thái tích phân
+
+#### 2. Gán cực bằng phương pháp symbolic
+
+Hàm sử dụng **Symbolic Math Toolbox** của MATLAB để:
+
+1. **Khai báo các biến symbolic:**
+   ```matlab
+   syms k1 k2 k3 k4 kex ketheta s;
+   k = [k1 k2 k3 k4];
+   ke = [kex ketheta];
+   ```
+
+2. **Xây dựng ma trận hệ thống mở rộng:**
+   ```matlab
+   Ac = [(sys.A-sys.B*k) (sys.B*ke); -sys.C zeros(2,2)];
+   ```
+
+3. **Giải phương trình đặc trưng:**
+   - Tính đa thức đặc trưng mong muốn: `denPoly = poly(p)`
+   - Tính đa thức đặc trưng của hệ thống: `det(s*eye(6) - Ac)`
+   - Giải hệ phương trình để tìm các hệ số $k_1, k_2, k_3, k_4, k_{ex}, k_{e\theta}$
+
+#### 3. Phân tích đáp ứng
+
+Hàm tự động phân tích và hiển thị:
+
+**Thông số đáp ứng vị trí xe đẩy ($x$):**
+- Thời gian tăng (Rise Time): Từ 10% đến 90% giá trị cuối
+- Thời gian xác lập (Settling Time): ±2% giá trị cuối
+- Độ vọt lố (Overshoot): Tính theo %
+- Giá trị đỉnh và thời gian đỉnh
+
+**Thông số đáp ứng góc con lắc ($\theta$):**
+- Giá trị đỉnh và thời gian đỉnh
+- Kiểm tra ràng buộc: $|\theta| \leq 0.35$ rad (≈ 20°)
+
+#### 4. Trực quan hóa kết quả
+
+Hàm tự động vẽ 2 đồ thị con:
+
+1. **Đồ thị vị trí xe đẩy:**
+   - Đường đáp ứng chính
+   - Đường thời gian tăng (Tr)
+   - Đường thời gian xác lập (Ts) với dải ±2%
+   - Các điểm đặc biệt được đánh dấu
+
+2. **Đồ thị góc con lắc:**
+   - Đường đáp ứng góc lắc
+   - Đường ràng buộc ±0.35 rad
+   - Đường ±0.02 rad (vùng xác lập)
+   - Điểm cực trị được đánh dấu
+
+### Ưu điểm của phương pháp
+
+1. **Loại bỏ sai số xác lập:** Nhờ có tích phân trong vòng điều khiển
+2. **Điều khiển đồng thời:** Cả vị trí xe và góc con lắc
+3. **Gán cực chính xác:** Sử dụng symbolic math để giải chính xác
+4. **Phân tích tự động:** Tính toán và hiển thị các thông số quan trọng
+5. **Trực quan hóa đầy đủ:** Đồ thị với các thông số đánh dấu rõ ràng
+
+### Ví dụ sử dụng
+
+```matlab
+% Load hệ thống từ file
+load('bien.mat', 'sys_xe_day_con_lac');
+
+% Định nghĩa các cực mong muốn (6 cực)
+desired_poles = [-2, -3, -4, -5, -1+1j, -1-1j];
+
+% Thiết kế bộ điều khiển
+[K, Ke, sysC, info] = bo_dieu_khien_con_lac_xe_day(sys_xe_day_con_lac, desired_poles, 10);
+
+% Hiển thị kết quả
+fprintf('Ma trận K: [%.3f %.3f %.3f %.3f]\n', K);
+fprintf('Ma trận Ke: [%.3f %.3f]\n', Ke);
+```
+
+
+## Liên hệ
+
+Nếu có thắc mắc về bài tập lớn này, vui lòng liên hệ qua email hoặc tạo issue trên GitHub repository.
+
+---
+
+*Bài tập lớn này được thực hiện nhằm mục đích học tập trong môn Động lực học & Điều khiển (ME3011) tại Đại học Bách Khoa Hà Nội.*
