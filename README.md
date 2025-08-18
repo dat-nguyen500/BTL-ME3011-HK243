@@ -191,4 +191,4 @@ Nếu có thắc mắc về bài tập lớn này, vui lòng liên hệ qua emai
 
 ---
 
-*Bài tập lớn này được thực hiện nhằm mục đích học tập trong môn Động lực học & Điều khiển (ME3011) tại Đại học Bách Khoa Hà Nội.*
+*Bài tập lớn này được thực hiện nhằm mục đích học tập trong môn Động lực học & Điều khiển (ME3011) tại Đại học Bách Khoa - Đại học Quốc gia TPHCM.*
