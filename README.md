@@ -1,3 +1,8 @@
+<script type="text/javascript" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+
 # Bài tập lớn Động lực học & Điều khiển (ME3011) - Học kỳ 243 - Lớp DT01
 
 Đây là là kho lưu trữ các đoạn mã, sơ đồ, báo cáo được hình thành trong quá trình làm bài tập lớn môn Động lực học & Điều khiển (ME3011) - Học kỳ 243 - Lớp DT01.
