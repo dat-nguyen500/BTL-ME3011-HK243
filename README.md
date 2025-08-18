@@ -85,7 +85,7 @@ Hàm này được thiết kế để tạo bộ điều khiển không gian tr�
 ### Tham số đầu ra
 
 - `K`: Vector hệ số phản hồi trạng thái $\mathbf{K} = [k_1, k_2, k_3, k_4]$
-- `Ke`: Vector hệ số phản hồi tích phân $\mathbf{K}_e = [k_{ex}, k_{e\theta}]$
+- `Ke`: Vector hệ số phản hồi tích phân $\mathbf K_e = [k_{ex}, k_{e\theta}]$
 - `sysC`: Hệ thống vòng kín mở rộng (6×2, có tích phân để loại bỏ sai số xác lập)
 - `thong_tin`: Thông số đáp ứng của hệ thống (rise time, settling time, overshoot, etc.)
 
@@ -96,11 +96,17 @@ Hàm này được thiết kế để tạo bộ điều khiển không gian tr�
 Hàm này sử dụng phương pháp **augmented state space** để thiết kế bộ điều khiển có khả năng loại bỏ sai số xác lập. Hệ thống được mở rộng bằng cách thêm các trạng thái tích phân của lỗi:
 
 **Hệ thống gốc (4 trạng thái):**
-$$\dot{\mathbf{x}}(t) = \mathbf{A}\mathbf{x}(t) + \mathbf{B}\mathbf{u}(t)$$
-$$\mathbf{y}(t) = \mathbf{C}\mathbf{x}(t)$$
+```math
+\dot{\mathbf{x}}(t) = \mathbf{A}\mathbf{x}(t) + \mathbf{B}\mathbf{u}(t)
+```
+```math
+\mathbf{y}(t) = \mathbf{C}\mathbf{x}(t)
+```
 
 **Hệ thống mở rộng (6 trạng thái):**
-$$\begin{bmatrix} \dot{\mathbf{x}}(t) \\ \dot{\mathbf{x}}_N(t) \end{bmatrix} = \begin{bmatrix} \mathbf{A} - \mathbf{B}\mathbf{K} & \mathbf{B}\mathbf{K}_e \\ -\mathbf{C} & \mathbf{0}_{2 \times 2} \end{bmatrix} \begin{bmatrix} \mathbf{x}(t) \\ \mathbf{x}_N(t) \end{bmatrix} + \begin{bmatrix} \mathbf{0}_{4 \times 2} \\ \mathbf{I}_{2 \times 2} \end{bmatrix} \mathbf{r}(t)$$
+```math
+\begin{bmatrix} \dot{\mathbf{x}}(t) \\ \dot{\mathbf{x}}_N(t) \end{bmatrix} = \begin{bmatrix} \mathbf{A} - \mathbf{B}\mathbf{K} & \mathbf{B}\mathbf{K}_e \\ -\mathbf{C} & \mathbf{0}_{2 \times 2} \end{bmatrix} \begin{bmatrix} \mathbf{x}(t) \\ \mathbf{x}_N(t) \end{bmatrix} + \begin{bmatrix} \mathbf{0}_{4 \times 2} \\ \mathbf{I}_{2 \times 2} \end{bmatrix} \mathbf{r}(t)
+```
 
 Trong đó:
 - $\mathbf{x}_N(t)$: Vector trạng thái tích phân của lỗi
