@@ -522,7 +522,16 @@ end
     \end{figure}
     \item \textbf{Phân tích, nhận xét}
     \begin{itemize}
-        \item 
+        \item Đáp ứng vị trí xe $x(t)$
+        \begin{itemize}[noitemsep]
+            \item Khi có xung tác động tại thời điểm $t=0$, vị trí của xe đẩy tiến tới giá trị xấp xỉ $x(\infty) = 6.3$ m. 
+            \item Thời gian để xe đạt được vị trí $x=6.3$ m xấp xỉ 60 -- 70 giây.
+        \end{itemize} 
+        \item Đáp ứng góc $\theta(t)$:
+        \begin{itemize}[noitemsep]
+            \item $\theta$ tăng mạnh khi có xung kích, đạt cực đại khoảng 0.085 rad ($\approx 4.9^\circ$).
+            \item Sau đó, $\theta$ giảm dần về 0 do tác dụng của lực trọng trường và hệ số cản $b$ khiến thời gian tắt khá nhanh (khoảng 2 giây).
+        \end{itemize} 
     \end{itemize}
 \end{itemize}
 
@@ -530,7 +539,9 @@ end
 \subsubsection{Đầu vào hàm nấc đơn vị}
 \begin{itemize}
     \item Kết quả mô phỏng 
-    \begin{figure}[ht]
+    
+    {
+        \captionsetup{type=figure}
         \centering
         \begin{subfigure}[b]{0.495\linewidth}
             \centering
@@ -543,10 +554,18 @@ end
             \caption{$\theta$}
         \end{subfigure}
         \caption{Kết quả mô phỏng với đầu vào là hàm nấc đơn vị}
-    \end{figure}
+    }
     \item \textbf{Phân tích, nhận xét}
     \begin{itemize}
-        \item 
+        \item Đáp ứng vị trí xe $x(t)$
+        \begin{itemize}
+            \item Sau một thời gian ngắn (15 -- 20 giây), $x(t)$ gần như tăng tuyến tính theo thời gian và tăng đến vô cùng. 
+        \end{itemize}
+        \item Đáp ứng góc $\theta(t)$
+        \begin{itemize}
+            \item Góc theta tăng vọt mạnh, khoảng 0.045 rad ($\approx 2.6^\circ$) trong vài giây đầu rồi giảm về 0 trong khoảng 80 giây.
+            \item Hệ có khả năng tự tắt dao động và đảm bảo tải trở về trạng thái cân bằng sau một khoảng thời gian.
+        \end{itemize}
     \end{itemize}
 \end{itemize}
 
@@ -570,7 +589,16 @@ end
     \end{figure}
     \item \textbf{Phân tích, nhận xét}
     \begin{itemize}
-        \item 
+        \item Đáp ứng vị trí xe $x(t)$
+        \begin{itemize}
+            \item Trong khoảng 0 -- 5 giây, xe tăng tốc đều và vị trí tăng dần theo thời gian. Sau khi ngắt lực, do quán tính và ma sát vị trí vẫn tiếp tục thay đổi và sau đó dần ổn định tại vị trí lớn hơn nhiều giá trị ban đầu khoảng 320 m.
+            \item Hệ có quán tính lớn và hệ không ổn định theo vị trí tuyệt đối.
+        \end{itemize}
+        \item Đáp ứng góc lắc $\theta(t)$
+        \begin{itemize}
+            \item Ngay khi có lực góc con lắc tăng nhanh đến cực đại (0.42 rad) sau đó giảm dần biên độ. Khi ngắt lực, đồ thị dốc mạnh hơn nên con lắc giảm nhanh về 0 hơn.
+            \item Do động góc tắt dần khá chậm (50 -- 60 giây) mới ổn định tại vị trí cân bằng. 
+        \end{itemize}
     \end{itemize}
 \end{itemize}
 
@@ -659,6 +687,12 @@ Kết quả mô phỏng bằng MATLAB/Simulink
 
 \subsubsection{Đánh giá, nhận xét}
 
+\begin{itemize}
+    \item Góc lắc $\theta_{\max}=0.0472 < 0.05$ rad tại thời điểm 0.101 giây nên thỏa mãn yêu cầu. Dao động nhanh chóng tắt thời gian xác lập thỏa yêu cầu $T_s<5$ giây. Sau giai đoạn dao động, góc con lắc $\theta$ trở về 0.
+    \item Bộ PID đáp ứng tốt mục tiêu thiết kế, hệ ổn định và đưa sai số tiến về 0.
+
+\end{itemize}
+
 
 \subsection{Thiết kế bộ điều khiển PID cho vị trí xe đẩy}
 \subsubsection{Yêu cầu thiết kế}
@@ -735,8 +769,13 @@ Kết quả mô phỏng bằng MATLAB/Simulink
     \caption{Kết quả mô phỏng bằng MATLAB/Simulink cho hệ thống điều khiển xe đẩy}
 \end{figure}
 \subsubsection{Đánh giá, nhận xét}
+\begin{itemize}
+    \item Kết quả mô phỏng cho thấy vị trí xe đẩy $x(t)$ đạt vị trí xa nhất khoảng 0.6 -- 0.65 m trước khi tiến đến giá trị ổn định 0.5 m, độ vọt lố là 13.8\%.  Thời gian xác lập 0.16 < 3 giây đạt tiêu chuẩn thiết kế. Sai số xác lập bằng 0 thỏa mãn yêu cầu chính xác vị trí.
+    \item Kết quả mô phỏng cho thấy góc con lắc $\theta(t)$ đạt đỉnh khoảng 0.68 -- 0.69 rad. Sau giai đoạn dao động (khoảng 2 giây), góc con lắc $\theta$ trở về 0.
 
-\newpage
+\end{itemize}
+
+
 \subsection{Thiết kế bộ điều khiển không gian trạng thái}
 \subsubsection{Yêu cầu thiết kế}
 \begin{minipage}[t]{0.3\linewidth}
