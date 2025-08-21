@@ -689,8 +689,8 @@ Kết quả mô phỏng bằng MATLAB/Simulink
 
 \begin{itemize}
     \item Góc lắc $\theta_{\max}=0.0472 < 0.05$ rad tại thời điểm 0.101 giây nên thỏa mãn yêu cầu. Dao động nhanh chóng tắt thời gian xác lập thỏa yêu cầu $T_s<5$ giây. Sau giai đoạn dao động, góc con lắc $\theta$ trở về 0.
+    \item Vị trí xe đẩy $x(t)$ tăng dần và tiến về giá trị ổn định xấp xỉ 0.1 m. Đáp ứng không xuất hiện vọt lố. Thời gian ổn định từ 1.5 -- 2 giây.
     \item Bộ PID đáp ứng tốt mục tiêu thiết kế, hệ ổn định và đưa sai số tiến về 0.
-
 \end{itemize}
 
 
@@ -1007,9 +1007,7 @@ Ta thấy, các yêu cầu thiết kế đều được thỏa mãn với cặp 
     \end{bmatrix}
 \end{align*}
 
-\textbf{Nhận xét:} 
-
-
+\textbf{Nhận xét:} Các tiêu chí thiết kế đặt ra (thời gian xác lập, thời gian tăng, độ vọt lố, sai số xác lập) đều thỏa. Bộ điều khiển không gian trạng thái theo phương pháp SIMO đã đảm bảo ổn định cả vị trí và góc con lắc, sai số đều tiến đến 0. Hệ thống cũng đáp ứng khá nhanh và chính xác.
 
 
 \newpage
